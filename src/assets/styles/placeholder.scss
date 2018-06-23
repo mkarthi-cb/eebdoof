@@ -1,0 +1,80 @@
+.cb-placeholder{
+  background: linear-gradient(to right, rgba(232, 232, 242, 1) 8%, rgba(221, 221, 231, 1) 18%, rgba(232, 232, 242, 1) 33%);
+  background-size: 800px 104px;
+  animation-name: placeHolderShimmer;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  margin: 6px 0;
+  &__ {
+    &wrap{
+      padding: 14px 0;
+    }
+    &section{
+      padding: 12px 15px;
+      background: #fff;
+    }
+    &center{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &white{
+      background: #fff;
+    }
+    &left{
+      float: left;
+    }
+    &right{
+      float: right;
+    }
+    &sm{
+      height: 6px;
+    }
+    &st{
+      height: 8px;
+    }
+    &md{
+      height: 16px;
+    }
+    &xl{
+      height: 60px;
+    }
+    &rect{
+      &--{
+        &sm{
+          width: 60px;
+        }
+        &md{
+          width: 100px;
+        }
+        &lg{
+          width: 150px;
+        }
+        &xl{
+          width: 200px;
+        }
+        &xxl{
+          width: 300px;
+        }
+      }
+    }
+  }
+ 
+}
+@-webkit-keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}

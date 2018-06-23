@@ -1,0 +1,59 @@
+.cn-period {
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 18px;
+    width: 280px;
+    padding: 8px;
+    color: rgba(0, 0, 0, 0.9);
+    text-align: left;
+    &__ {
+        &col {
+            display: inline-block;
+            width: (100%/7);
+            text-align: center;
+            cursor: pointer;
+            line-height: 32px;
+            border-right: 1px solid rgba(0, 0, 0, 0.04);
+            &:first-child {
+                border-left: 1px solid rgba(0, 0, 0, 0.04);
+            }
+            &-- {
+                &active {
+                    background: #3367d6;
+                    color: #fff;
+                }
+                &disabled {
+                    cursor: not-allowed;
+                    pointer-events: none;
+                }
+            }
+        }
+        &row {
+            border-top: 1px solid rgba(0, 0, 0, 0.04);
+            &:last-child {
+                .cn-period__col {
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+                }
+            }
+        }
+        &action {
+            padding: 6px 0;
+            text-align: right;
+        }
+        &link {
+            text-decoration: underline;
+            color: #7f7f7f;
+            font-size: 12px;
+            text-transform: uppercase;
+            cursor: not-allowed;
+            opacity: 0.8;
+            &-- {
+                &active {
+                    opacity: 1;
+                    color: #3367d6;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,162 @@
+$flatpickr : '.flatpickr';
+@mixin override-day-colors($selector){
+    .cn-modules #{$flatpickr}-day{
+        &#{$selector},
+        &#{$selector}.inRange,
+        &#{$selector}:focus,
+        &#{$selector}:hover,
+        &#{$selector}.prevMonthDay,
+        &#{$selector}.nextMonthDay{
+            background: #5000D8;
+            box-shadow: none;
+            color: #fff;
+            border-color: #5000D8;
+        }
+    }
+}
+.cn-modules {
+    & #{$flatpickr}{
+        &-{
+            &wrapper{
+
+            }
+
+            &input{
+                width: 0;
+                padding: 0;
+                min-width: 0;
+                margin: 0;
+                border: 0;
+            }
+
+            &calendar{
+                border: 1px solid #DCDCDC;
+                font-size: 12px;
+                border-radius: 2px;
+                background-color: #fff;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 20, 0.16), 0 8px 16px 0 rgba(0, 0, 20, 0.16);
+            }
+
+            &months{
+                border-bottom: 1px solid #e1e1e1;
+                height: 32px;
+
+                & #{$flatpickr}{
+                    &-{
+                        &month{
+                            height: 100%;
+                        }
+                        &prev-month{
+                            left: auto;
+                            right: 30px;
+
+                            & svg{
+                                width: 12px;
+                                height: 12px;
+                            }
+                            &:hover svg{
+                                fill: currentColor;
+                            }
+                        }
+                        &next-month{
+                            & svg{
+                                width: 12px;
+                                height: 12px;
+                            }
+
+                            &:hover svg{
+                                fill: currentColor;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &current-month{
+                font-size: 12px;
+                left: 0;
+                text-align: left;
+                padding-left: 12px;        
+                height: 100%;
+                padding-top: 0;
+                line-height: 32px;
+
+                & span.cur-month{
+                    font-size: 12px;
+                }
+            }
+
+            &calendar{
+                &.arrowTop{
+                    &:before,
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+
+            &day{
+                &.disabled{
+                    pointer-events: auto;
+                    color: rgba(57,57,57,0.3);
+                }
+                &.prevMonthDay, 
+                &.nextMonthDay{
+                    opacity: 0;
+                    pointer-events: none;
+                    cursor: auto;
+                }
+
+            }
+
+            &time{
+                border-bottom: 1px solid #e1e1e1;
+            }
+
+            &alt{
+                &--{
+                    &hidden{
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+@include override-day-colors('.selected');
+@include override-day-colors('.startRange');
+@include override-day-colors('.endRange');
+
+.cn-flatpickr-action{
+    &s{
+        display: flex;
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+
+    &{
+        flex: 1;
+    }
+
+    &--{
+        &done{
+            text-align: right;
+
+            .cn-btn{
+                min-width: auto;
+            }
+        }
+        &now{
+            text-align: left;
+
+            .cn-btn{
+                min-width: auto;
+            }
+        }
+    }
+
+
+}

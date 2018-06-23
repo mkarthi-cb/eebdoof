@@ -1,0 +1,43 @@
+{
+    "name": "cb-billing-rules-ui",
+    "version": "1.0.0",
+    "description": "Billing Rules UI Component",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack --progress --colors --watch ",
+        "build": "webpack"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-plugin-transform-decorators-legacy": "^1.3.4",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-stage-2": "^6.24.1",
+        "circular-dependency-plugin": "^4.2.1",
+        "clean-webpack-plugin": "^0.1.17",
+        "css-loader": "^0.28.7",
+        "sass-resources-loader": "^1.3.1",
+        "ts-loader": "^2.3.7",
+        "typescript": "^2.5.3",
+        "vue-class-component": "^5.0.2",
+        "vue-loader": "^13.0.5",
+        "vue-template-compiler": "^2.4.4",
+        "vuex-typescript": "^0.1.0",
+        "webpack": "^3.6.0",
+        "webpack-bundle-analyzer": "^2.9.1",
+        "vue-property-decorator": "^6.0.0",
+        "babel-preset-stage-1": "^6.24.1",
+        "node-sass": "^4.6.0",
+        "sass-loader": "^6.0.6"
+    },
+    "dependencies": {
+        "axios": "^0.16.2",
+        "flatpickr": "4.4.4",
+        "vue": "^2.4.4",
+        "vue-flatpickr-component": "7.0.1",
+        "vuex": "^2.4.1"
+    }
+}
