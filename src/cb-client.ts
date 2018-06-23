@@ -29,12 +29,14 @@ var constructQueryParams = function(allowed, params) {
 
 const apis = [
   {
-    name: "features",
+    name: "app",
     actions: [
       {
-        name: "load",
-        method: "get",
-        endpointFn: (params) => `/site_preferences/${params.featureId}/ui_config`
+        name: "create_item",
+        method: "post",
+        endpointFn: (params) => {
+          return `/foodbees/create_item`
+        }
       },
       {
         name: "enable",
@@ -42,128 +44,8 @@ const apis = [
         endpointFn: (params) => `/site_preferences/feature/${params.featureId}/enable`
       },
       {
-        name: "disable",
-        method: "post",
-        endpointFn: (params) => `/site_preferences/feature/${params.featureId}/disable`
-      },
-      {
-        name: "update_rule",
-        method: "post",
-        endpointFn: (params) => `/site_preferences/${params.ruleName}/update_rule`
-      },
-      {
-        name: "add_rule",
-        method: "post",
-        endpointFn: (params) => {
-          return `/site_preferences/${params.ruleName}/add_rule`;
-        }
-      },
-      {
-        name: "override_rule",
-        method: "post",
-        endpointFn: (params) => {
-          return `/site_preferences/${params.ruleName}/override_rule`;
-        }
-      },
-      {
         name: "get_options",
         method: "get",
-        endpointFn: (params) => {
-          let url = decodeURIComponent(params.url);
-          return `${url}`
-        }
-      },
-      {
-        name:'toggle_text_editor',
-        method: "post",
-        endpointFn: (params) =>{
-          return `/site_preferences/edit_text`;
-        }
-      },
-      {
-        name:'update_prefex_text',
-        method: 'post',
-        endpointFn:(params) => {
-          return `site_preferences/prefex_text_update`;
-        }
-      },
-      {
-        name: 'update_namespace_text',
-        method: 'post',
-        endpointFn:(params) =>{
-          return `/site_preferences/namespace_text_update`;
-        }
-      }
-    ]
-  },
-  {
-    name: "criteria",
-    actions: [
-      {
-        name: "load",
-        method: "get",
-        endpointFn: (params) => {
-          return `/site_preferences/${params.ruleName}/get_criteria_ui`
-        }
-      },
-      {
-        name: "add",
-        method: "post",
-        endpointFn: (params) => {
-          return `/site_preferences/${params.ruleName}/add_criteria`
-        }
-      },
-      {
-        name: "update",
-        method: "post",
-        endpointFn: (params) => {
-          return `/site_preferences/${params.ruleName}/update_criteria`
-        }
-      },
-      {
-        name: "delete",
-        method: "post",
-        endpointFn: (params) => {
-          return `/site_preferences/criteria/${params.ruleName}/delete`
-        }
-      }
-    ]
-  },
-  {
-    name: "override",
-    actions: [
-      {
-        name: "load",
-        method: "get",
-        endpointFn: (params) => {
-          let url = decodeURIComponent(params.url);
-            return `${url}`
-        }
-      },
-      {
-        name: "update",
-        method: "post",
-        endpointFn: (params) => {
-          let url = decodeURIComponent(params.url);
-          return `${url}`
-        }
-      }
-    ]
-  },
-  {
-    name: "decision",
-    actions: [
-      {
-        name: "load",
-        method: "get",
-        endpointFn: (params) => {
-          let url = decodeURIComponent(params.url);
-          return `${url}`
-        }
-      },
-      {
-        name: "update",
-        method: "post",
         endpointFn: (params) => {
           let url = decodeURIComponent(params.url);
           return `${url}`
@@ -176,10 +58,7 @@ const apis = [
 class CbClient {
   restClient: RestClient;
 
-  features: any;
-  criteria: any;
-  override: any;
-  decision: any;
+app: any;
 
   requestCounter: number = 0;
 

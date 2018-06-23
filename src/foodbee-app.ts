@@ -4,7 +4,7 @@ import HomePage from "@/HomePage.vue"
 import { ElementSettingsCallbacks } from "types";
 import GrabCodeModal from "@/checkout-common-components.js";
 
-export default class CbBillingRules {
+export default class FoodbeeApp {
   static settingsCallbacks : ElementSettingsCallbacks;
 
   public static renderUserPage(properties) {    
@@ -19,6 +19,19 @@ export default class CbBillingRules {
     }).$mount(containerElement);
   }
 
+  public static renderSettings() {
+    var appComps = document.querySelectorAll('food-bee-app');
+    var _store = app_store();
+    while(appComps.length != 0) {
+      let appComp = appComps[0];
+      let vm = new Vue({
+        el: appComp,
+        store: _store,
+        template: appComp.outerHTML
+      });
+      appComps = document.querySelectorAll('food-bee-app');
+    }
+  }
 
   private static getContainerElement(): HTMLDivElement {
     let containerElement = <HTMLDivElement>document.getElementById("fb-app");
