@@ -55,7 +55,9 @@
 							<span class="icon cn-glyph-search"></span>
 							<span style="margin-left: 6px;">Search...</span>
 						</div>
-
+						<!-- <div class="fb-dp__actions">
+							
+						</div> -->
 					</div>
 					<!-- ===========================================================
 					Start: Header
@@ -77,9 +79,6 @@
 									<div class="fb-table__col">
 										Restaurants
 									</div>
-									<div class="fb-table__col">
-										Rating
-									</div>
 								</div>
 							</div>
 							<!-- ===================================================
@@ -89,7 +88,7 @@
 							Start: Content Table
 							==================================================== -->
 							<div class="fb-table__content">
-								 <div class="fb-rest active" v-for="(hotel, index) in hotels" v-bind:key="index">
+                                    <div class="fb-rest active" v-for="(hotel, index) in hotels" v-bind:key="index">
                                         <!-- ===========================================
                                         Start: Menu
                                         ============================================ -->
@@ -114,7 +113,12 @@
                                                 Start: Rating
                                                 ==================================== -->
                                                     <div class="fb-rest__col">
-                                                        
+                                                        <div class="fb-rest__actions">
+                                                            <div class="fb-rest__action fb-btn" @click="showCreateItemModalBox = true">Add Item</div>
+                                                            <div class="fb-rest__action">
+                                                                
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 <!-- ===================================
                                                 End: Rating
@@ -157,10 +161,11 @@
                                                                 Menu Action
                                                             ============================================ -->
                                                             <div class="fb-menu__actions">
-                                                                <div class="fb-menu__actions">
-		                                    						<div class="fb-menu__action fb-icon fb-add" @click="addToCart(item)">
-		                                    							Add
-		                                    						</div>
+                                                                <div class="fb-menu__action fb-icon fb-edit" @click="showEditItemModal(item)" >
+                                                                    <div class="icon cn-glyph-pencil"></div>
+                                                                </div>
+                                                                <div class="fb-menu__action fb-icon fb-delete" @click="showDeleteItemModal(item)">
+                                                                    <div class="icon cn-glyph-delete"></div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -195,77 +200,72 @@
 			<!-- ===================================================================
 			End: Main Menu Content 
 			==================================================================== -->
-			 <!-- =======================================================================
+            <!-- =======================================================================
 		Start: Main Cart 
 		======================================================================== -->
-		<div class="fb-cart" >
+		<div class="fb-cart" style="display:none">
 			<div class="fb-cart__icon" @click="showCart = !showCart">
-				<div class="fb-cart__number" v-if="isCartItemPresent">{{cartItems.length}}</div>
+				<div class="fb-cart__number">3</div>
 				<div>
 					<img src="/local-assets/app/modules/images/fb/cart.png" alt="" class="img-responsive">
 				</div>
 			</div>
 
 			<div class="fb-order" :class="{'fb-order--active':showCart}">
-				<div v-if="isCartItemPresent">
-					<div class="fb-order__header">
-						Your Order
-					</div>
-					<div class="fb-order__content">
-						<!-- =======================================================================
-						Start: item
-						======================================================================== -->
-						<div class="fb-order__item" v-for="(item, index) in cartItems" v-bind:key="index">
-							<div class="fb-order__main">
-								<div class="fb-order__name">
-									{{item.name}}
-								</div>
-								<div class="fb-quantity">
-									<div class="fb-quantity__select">
-										<select v-model="item.quantity">
-											<option value="1">1</option>
-											<option value="2">2</option>
-											<option value="3">3</option>
-										</select>
-									</div>
-									<div>
-										&times;
-									</div>
-									<div class="fb-quantity__amount">
-										Rs {{item.price}}.00
-									</div>
-								</div>
-							</div>
-							<div class="fb-order__aside">
-								Rs {{item.price * (item.quantity|| 1)}}.00
-							</div>
-						</div>
-
-						<div class="fb-order__item">
-							<div class="fb-order__main">
-								<div class="fb-order__name">
-									Total
-								</div>
-							</div>
-							<div class="fb-order__aside" style="color: #000; font-size: 16px; ">
-								Rs {{getTotoal}}.00
-							</div>
-						</div>
-						<!-- =======================================================================
-						End: Item
-						======================================================================== -->
-					</div>
-					<div class="fb-order__footer">
-						<div class="fb-cbtn fb-cbtn--po">
-							Place Order
-						</div>
-						<div class="fb-cbtn fb-cbtn--cancel">
-							Reset Cart
-						</div>
-					</div>
+				<div class="fb-order__header">
+					Your Order
 				</div>
-				<div v-else>
-					Your cart is Empty. Please choose items to order.
+				<div class="fb-order__content">
+					<!-- =======================================================================
+					Start: item
+					======================================================================== -->
+					<div class="fb-order__item">
+						<div class="fb-order__main">
+							<div class="fb-order__name">
+								Chicken Biryani Combo
+							</div>
+							<div class="fb-quantity">
+								<div class="fb-quantity__select">
+									<select>
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+									</select>
+								</div>
+								<div>
+									&times;
+								</div>
+								<div class="fb-quantity__amount">
+									$99.00
+								</div>
+							</div>
+						</div>
+						<div class="fb-order__aside">
+							$99.00
+						</div>
+					</div>
+
+					<div class="fb-order__item">
+						<div class="fb-order__main">
+							<div class="fb-order__name">
+								Total
+							</div>
+						</div>
+						<div class="fb-order__aside" style="color: #000; font-size: 16px; ">
+							$99.00
+						</div>
+					</div>
+					<!-- =======================================================================
+					End: Item
+					======================================================================== -->
+				</div>
+				<div class="fb-order__footer">
+					<div class="fb-cbtn fb-cbtn--po">
+						Place Order
+					</div>
+					<div class="fb-cbtn fb-cbtn--cancel">
+						Reset Cart
+					</div>
 				</div>
 			</div>
 		</div>
@@ -279,8 +279,7 @@
             End: FB 
             ======================================================================== -->
         </div>
-        <!-- <div class="cn-btn cn-btn--primary" @click="showCreateItemModalBox = true">Create Item</div>
-        <create-item v-if="showCreateItemModalBox" @closeCreateItemModalDialog= "closeCreateItemModalDialog()"/> -->
+        <create-item :item="currentItem" v-if="showCreateItemModalBox" @closeCreateItemModalDialog= "closeCreateItemModalDialog()"/>
     </div>
 </template>
 <script lang="ts">
@@ -289,7 +288,7 @@ import Vue from 'vue';
 import Vuex from "vuex";
 import Component from 'vue-class-component';
 import CreateItemModal from "@/components/CreateItemModal.vue";
-import {Hotel, Item, OrderItem, Cart} from 'store/types/common';
+import {Hotel, Item } from 'store/types/common';
 import * as app from "@/store/app";
 
 
@@ -300,49 +299,49 @@ import * as app from "@/store/app";
             // 'cb-placeholder': Placeholder,
             'create-item':CreateItemModal
         },
-        name: 'food-bee-app'
+        name: 'food-bee-hotel'
     })
-export default class FoodbeePage extends Vue {
+export default class HotelPage extends Vue {
     showCreateItemModalBox: boolean = false;
-	showCart: boolean= false;
-    
+    showDeleteItemModalBox: boolean = false;
+    currentItem: Item;
+    showCart: boolean = false;
+    data(){
+        return{
+            currentItem:{}
+        }
+    }
     closeCreateItemModalDialog(){
+        delete this.currentItem;
         this.showCreateItemModalBox = false;
     }
+
+    closeDeleteItemModal(){
+        delete this.currentItem;
+        this.showDeleteItemModalBox = false;
+    }
+
+    showEditItemModal(item: Item){
+        this.currentItem = item;
+        this.showCreateItemModalBox = true;
+    }
+
+    showDeleteItemModal(item: Item){
+        this.currentItem = item;
+        this.showDeleteItemModalBox = true;
+    }
     get userName():string{
-        console.log(app.getUser(this.$store));
         return app.getUser(this.$store).name;
     }
 
     get hotels(): Array<Hotel>{
         return app.getHotels(this.$store);
     }
-    created(){
-        app.getCompayUserConf(this.$store).then(data=>{
-        }); 
-	}
-	get getcart(): Cart{
-		return app.getCart(this.$store);
-	}
-	get cartItems(): Array<OrderItem>{
-		let cart = this.getcart;
-		return cart && cart.items;
-	}
-	get isCartItemPresent():boolean{
-		return this.cartItems && this.cartItems.length > 0;
-	}
-	get getTotoal(): number{
-		let total = 0;
-		this.cartItems.forEach((item) =>{
-				total = total + (item.price * item.quantity);
-		})
-		return total;
-	}
-	addToCart(item: Item){
-		app.addToCart(this.$store, {item: item, qty: 1}).then((data)=>{
 
-		})
-	}
+    created(){
+        app.getHotelUserConf(this.$store).then(data=>{
+        }); 
+    }
 }
 </script>
 

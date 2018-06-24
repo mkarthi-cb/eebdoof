@@ -39,16 +39,38 @@ const apis = [
         }
       },
       {
-        name: "enable",
+        name: "update_item",
         method: "post",
-        endpointFn: (params) => `/site_preferences/feature/${params.featureId}/enable`
+        endpointFn: (params)=>{
+          return `/foodbees/update_item`;
+        }
       },
       {
-        name: "get_options",
+        name: "delete_item",
+        method: "post",
+        endpointFn: (param)=>{
+          return `/foodbees/remove_item`
+        }
+      },
+      {
+        name:"get_hotel_conf",
+        method: "post",
+        endpointFn: (params)=>{
+          return `/foodbees/get_app_confs`
+        }
+      },
+      {
+        name:"add_to_cart",
+        method:"post",
+        endpointFn: (params)=>{
+          return `/foodbees/add_to_cart`;
+        }
+      },
+      {
+        name: "get_user_info",
         method: "get",
-        endpointFn: (params) => {
-          let url = decodeURIComponent(params.url);
-          return `${url}`
+        endpointFn: (params)=>{
+          return `/foodbees/get_user_info`;
         }
       }
     ]

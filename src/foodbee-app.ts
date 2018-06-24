@@ -7,17 +7,17 @@ import GrabCodeModal from "@/checkout-common-components.js";
 export default class FoodbeeApp {
   static settingsCallbacks : ElementSettingsCallbacks;
 
-  public static renderUserPage(properties) {    
-    let containerElement = this.getContainerElement();
-    new Vue({
-      render: h => h(HomePage, {
-        props: {
-          properties
-        },
-      }),
-      store: app_store(),
-    }).$mount(containerElement);
-  }
+  // public static renderUserPage(properties) {    
+  //   let containerElement = this.getContainerElement();
+  //   new Vue({
+  //     render: h => h(HomePage, {
+  //       props: {
+  //         properties
+  //       },
+  //     }),
+  //     store: app_store(),
+  //   }).$mount(containerElement);
+  // }
 
   public static renderSettings() {
     var appComps = document.querySelectorAll('food-bee-app');
@@ -30,6 +30,20 @@ export default class FoodbeeApp {
         template: appComp.outerHTML
       });
       appComps = document.querySelectorAll('food-bee-app');
+    }
+  }
+
+  public static renderHotelSettings() {
+    var appComps = document.querySelectorAll('food-bee-hotel');
+    var _store = app_store();
+    while(appComps.length != 0) {
+      let appComp = appComps[0];
+      let vm = new Vue({
+        el: appComp,
+        store: _store,
+        template: appComp.outerHTML
+      });
+      appComps = document.querySelectorAll('food-bee-hotel');
     }
   }
 

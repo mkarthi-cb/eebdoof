@@ -1,34 +1,15 @@
 <template>
     <div>
-        <div class="cn-modal cn-modules">
+        <div class="cn-modal cn-modal-danger cn-modules">
             <div class="cn-modal__container">
                 <div class="cn-modal__wrap">
                     <div class="cn-modal__group"> 
                         <div class="cn-modal__block">
                             <div class="cn-modal__main">
                                 <div class="cn-modal__header">
-                                    <div class="cn-modal__title">Create Item</div>
-                                    <!-- <div class="cn-modal__desc" v-if="modalDesc" v-html="modalDesc"></div> -->
-                                </div>
-                                <div class="cn-modal__content">
-                                    <div class="cn-form__field">
-                                        <label class="cn-form__label">Item Name</label>
-                                        <input class="cn-form__control" type="text" :placeholder="placeholder" v-model="item.name">
-                                    </div>
-                                    <div class="cn-form__field">
-                                        <label class="cn-form__label">Item Code</label>
-                                        <input class="cn-form__control" type="text" :placeholder="placeholder" v-model="item.code">
-                                    </div>
-                                    <div class="cn-form__field">
-                                        <label class="cn-form__label">Price</label>
-                                        <input class="cn-form__control" type="number" :placeholder="placeholder" v-model="item.price">
-                                    </div>
-                                    <div class="cn-form__field">
-                                        <label class="cn-form__label" >Type</label>
-                                            <select class=" cb-select cn-form__control" v-model="item.type">
-                                                    <option v-for="(opt, index) in options" v-bind:key="index" v-bind:value="opt.val" :selected="opt.val == vlaue" class="cb-select-opt">{{opt.name}}</option>
-                                            </select>
-                                        <div class="cn-form__help"></div>
+                                    <div class="cn-modal__title">Delete Item {{item.name || ''}}</div>
+                                    <div class="cn-modal__desc" >
+                                        Will delete this item permanently from your restaurant. 
                                     </div>
                                 </div>
                             </div>
@@ -37,7 +18,7 @@
                                 <div class="cn-modal__actions cn-mar--t-md">
                                     <div class="cn-modal__action">
                                         <!-- <span class="cn-btn cn-btn--raised cn-btn--primary" @click="next()"  :class="{'cn-btn--spinner': showLoader}">{{submitText}} </span> -->
-                                        <input type="button" class="cn-btn cn-btn--raised cn-btn--primary cn-btn--action" :value="btnValue" @click="next()" :class="{'cn-btn--spinner': showLoader}">
+                                        <input type="button" class="cn-btn cn-btn--raised cn-btn--primary cn-btn--action" value="Delete" @click="next()" :class="{'cn-btn--spinner': showLoader}">
                                     </div>
                                     <div class="cn-modal__action">
                                         <!-- <a class="cn-modal__close" tabindex="0" @click="closeModal()">{{cancelBtnText}}</a> -->
@@ -78,7 +59,6 @@ import { Item } from 'store/types/common';
         properties: any;
         item: Item;
         showModalBox: boolean = false;
-        rulesLoaded:boolean = false;
         showLoader: boolean;
         created() {
             let _this = this;
@@ -93,9 +73,7 @@ import { Item } from 'store/types/common';
             let data ={
                 conf: _this.item
             }
-            let p = this.item.id ? app.updateItem(this.$store, {_data: data}) : app.createFoodItem(this.$store, {_data: data});
-                
-            p.then(data=>{
+            app.createFoodItem(this.$store, {_data: data}).then(data=>{
                 this.showLoader = false;
                 this.closeModal();
             }).catch(error => {
@@ -106,9 +84,7 @@ import { Item } from 'store/types/common';
         closeModal(): void {
             this.$emit("closeCreateItemModalDialog");
         }
-        get btnValue(): string{
-            return this.item.id ? "Update" :"Create";
-        }
+
         data(){
             return {
                 showModalBox: true,

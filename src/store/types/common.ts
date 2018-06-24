@@ -34,10 +34,16 @@ export interface Order{
 export interface OrderItem{
   order: Order;
   item: Item;
+  price: number;
   quantity: number;
   data: string;
   state: string;
 }
+
+export interface Cart{
+  items: Array<OrderItem>;
+}
+
 export interface Delivery{
   hotel: Hotel;
   user : User;
