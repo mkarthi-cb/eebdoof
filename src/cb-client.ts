@@ -67,6 +67,20 @@ const apis = [
         }
       },
       {
+        name:"place_order",
+        method:"post",
+        endpointFn: (params)=>{
+          return `/foodbees/place_order`;
+        }
+      },
+      {
+        name:"reset_cart",
+        method:"post",
+        endpointFn: (params)=>{
+          return `/foodbees/reset_cart`;
+        }
+      },
+      {
         name: "get_user_info",
         method: "get",
         endpointFn: (params)=>{

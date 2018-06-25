@@ -12,7 +12,7 @@
                     <div class="fb-header__container">
                         <div class="fb-header__main">
                             <div class="fb-header__logo">
-                                <img src="/local-assets/app/modules/images/fb/fb-logo-white.png" alt="" class="img-responsive">
+                                <img src="/local-assets/app/modules/images/fb/fb-loogo.png" alt="" class="img-responsive">
                             </div>
                         </div>
                         <div class="fb-header__actions">
@@ -21,7 +21,7 @@
                                     <div class="icon cn-glyph-bell"></div>
                                 </div>
                             </div>
-                            <div class="fb-header__action fb-track">
+                            <div class="fb-header__action fb-track" @click="showOderPage = !showOderPage">
                                 My Orders
                             </div>
                             <div class="fb-header__action">
@@ -40,7 +40,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="fb-main">
+				<your-order v-if="showOderPage"/>
+                <div class="fb-main" v-if="!showOderPage">
 			<div class="fb-main__container">
 			<!-- ===================================================================
 			Start: Main Menu Content 
@@ -89,7 +90,7 @@
 							Start: Content Table
 							==================================================== -->
 							<div class="fb-table__content">
-								 <div class="fb-rest active" v-for="(hotel, index) in hotels" v-bind:key="index">
+								 <div class="fb-rest" v-for="(hotel, index) in hotels" v-bind:key="index" :data-hotels="hotel.id">
                                         <!-- ===========================================
                                         Start: Menu
                                         ============================================ -->
@@ -114,7 +115,27 @@
                                                 Start: Rating
                                                 ==================================== -->
                                                     <div class="fb-rest__col">
-                                                        
+                                                        <div class="fb-rating" v-if="index==0">
+															<span class="icon cn-glyph-star"></span>
+															<span class="icon cn-glyph-star"></span>
+															<span class="icon cn-glyph-star"></span>
+															<span class="icon cn-glyph-star cn-glyph-star-outline"></span>
+															<span class="icon cn-glyph-star cn-glyph-star-outline"></span>
+														</div>
+														<div class="fb-rating" v-if="index==1">
+															<span class="icon cn-glyph-star"></span>
+															<span class="icon cn-glyph-star"></span>
+															<span class="icon cn-glyph-star"></span>
+															<span class="icon cn-glyph-star"></span>
+															<span class="icon cn-glyph-star-half"></span>
+														</div>
+														<div class="fb-rating" v-if="index==2">
+															<span class="icon cn-glyph-star"></span>
+															<span class="icon cn-glyph-star"></span>
+															<span class="icon cn-glyph-star"></span>
+															<span class="icon cn-glyph-star"></span>
+															<span class="icon cn-glyph-star"></span>
+														</div>
                                                     </div>
                                                 <!-- ===================================
                                                 End: Rating
@@ -159,7 +180,7 @@
                                                             <div class="fb-menu__actions">
                                                                 <div class="fb-menu__actions">
 		                                    						<div class="fb-menu__action fb-icon fb-add" @click="addToCart(item)">
-		                                    							Add
+																		{{getAddItemText(item)}}
 		                                    						</div>
                                                                 </div>
                                                             </div>
@@ -177,7 +198,7 @@
                                         <!-- ===========================================
                                         End: Menu Content
                                         ============================================ -->
-                                    </div>
+                                </div>							
 							</div>
 							<!-- ===================================================
 							End: Content Table
@@ -218,7 +239,7 @@
 						<div class="fb-order__item" v-for="(item, index) in cartItems" v-bind:key="index">
 							<div class="fb-order__main">
 								<div class="fb-order__name">
-									{{item.name}}
+									{{item.item.name}}
 								</div>
 								<div class="fb-quantity">
 									<div class="fb-quantity__select">
@@ -232,12 +253,12 @@
 										&times;
 									</div>
 									<div class="fb-quantity__amount">
-										Rs {{item.price}}.00
+										Rs {{item.item.price}}.00
 									</div>
 								</div>
 							</div>
 							<div class="fb-order__aside">
-								Rs {{item.price * (item.quantity|| 1)}}.00
+								Rs {{item.item.price * (item.quantity|| 1)}}.00
 							</div>
 						</div>
 
@@ -256,10 +277,10 @@
 						======================================================================== -->
 					</div>
 					<div class="fb-order__footer">
-						<div class="fb-cbtn fb-cbtn--po">
+						<div class="fb-cbtn fb-cbtn--po" @click="doPlaceOrder">
 							Place Order
 						</div>
-						<div class="fb-cbtn fb-cbtn--cancel">
+						<div class="fb-cbtn fb-cbtn--cancel" @click="doClearCart">
 							Reset Cart
 						</div>
 					</div>
@@ -279,8 +300,6 @@
             End: FB 
             ======================================================================== -->
         </div>
-        <!-- <div class="cn-btn cn-btn--primary" @click="showCreateItemModalBox = true">Create Item</div>
-        <create-item v-if="showCreateItemModalBox" @closeCreateItemModalDialog= "closeCreateItemModalDialog()"/> -->
     </div>
 </template>
 <script lang="ts">
@@ -289,6 +308,7 @@ import Vue from 'vue';
 import Vuex from "vuex";
 import Component from 'vue-class-component';
 import CreateItemModal from "@/components/CreateItemModal.vue";
+import YourOrder from "@/components/YourOrder.vue";
 import {Hotel, Item, OrderItem, Cart} from 'store/types/common';
 import * as app from "@/store/app";
 
@@ -298,25 +318,48 @@ import * as app from "@/store/app";
         },
         components: {
             // 'cb-placeholder': Placeholder,
-            'create-item':CreateItemModal
+			'create-item':CreateItemModal,
+			'your-order': YourOrder
         },
         name: 'food-bee-app'
     })
 export default class FoodbeePage extends Vue {
     showCreateItemModalBox: boolean = false;
 	showCart: boolean= false;
-    
+	currentTab = "hotels";
+	showOderPage: boolean = false;
+	
+
     closeCreateItemModalDialog(){
         this.showCreateItemModalBox = false;
     }
     get userName():string{
-        console.log(app.getUser(this.$store));
-        return app.getUser(this.$store).name;
+		let user = app.getUser(this.$store);
+        return user && user.name;
     }
 
     get hotels(): Array<Hotel>{
         return app.getHotels(this.$store);
-    }
+	}
+	getAddItemText(item: Item):string{
+		this.cartItems.forEach(_item=>{
+			if(_item.item.id == item.id){
+				return "Added";
+			}
+		});
+		return "Add";
+	}
+	doPlaceOrder(){
+		let _this = this;
+		app.placeOrder(this.$store).then(data => {
+			_this.showOderPage = true;
+		});
+	}
+	doClearCart(){
+		app.resetOrder(this.$store).then(data=>{
+
+		});
+	}
     created(){
         app.getCompayUserConf(this.$store).then(data=>{
         }); 
@@ -334,13 +377,14 @@ export default class FoodbeePage extends Vue {
 	get getTotoal(): number{
 		let total = 0;
 		this.cartItems.forEach((item) =>{
-				total = total + (item.price * item.quantity);
+				total = total + (item.item.price * item.quantity);
 		})
 		return total;
 	}
 	addToCart(item: Item){
+		let _this = this;
 		app.addToCart(this.$store, {item: item, qty: 1}).then((data)=>{
-
+			_this.showCart = true;
 		})
 	}
 }

@@ -9898,6 +9898,8 @@ exports.createDecorator = createDecorator;
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_0__app__["g"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_0__app__["h"]; });
 /* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_0__app__["i"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_0__app__["j"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_0__app__["k"]; });
 
 
 /***/ }),
@@ -10933,7 +10935,7 @@ exports = module.exports = __webpack_require__(5)(true);
 
 
 // module
-exports.push([module.i, "\n.cn-wrapper__header,\n  .cn-wrapper__footer{\n      display: none;\n}\t\n", "", {"version":3,"sources":["/Users/cb-karthikeyan/food/eebdoof/src/components/FoodbeePage.vue?521d7de6"],"names":[],"mappings":";AA6VA;;MAEA,cAAA;CACA","file":"FoodbeePage.vue","sourcesContent":["<template>\n    <div>\n        <div class=\"fbs\">\n            <!-- =======================================================================\n            Start: FB \n            ======================================================================== -->\n            <div class=\"fb-container\">\n                <!-- =======================================================================\n                Start: Main Header \n                ======================================================================== -->\n                <div class=\"fb-header\">\n                    <div class=\"fb-header__container\">\n                        <div class=\"fb-header__main\">\n                            <div class=\"fb-header__logo\">\n                                <img src=\"/local-assets/app/modules/images/fb/fb-logo-white.png\" alt=\"\" class=\"img-responsive\">\n                            </div>\n                        </div>\n                        <div class=\"fb-header__actions\">\n                            <div class=\"fb-header__action\">\n                                <div class=\"fb-notify\">\n                                    <div class=\"icon cn-glyph-bell\"></div>\n                                </div>\n                            </div>\n                            <div class=\"fb-header__action fb-track\">\n                                My Orders\n                            </div>\n                            <div class=\"fb-header__action\">\n                                <div class=\"fb-acc\">\n                                    <div class=\"fb-acc__figure\">\n                                        <img src=\"/local-assets/app/modules/images/fb/avt.jpg\" alt=\"\" class=\"img-responsive\">\n                                    </div>\n                                    <div class=\"fb-acc__content\">\n                                        <div class=\"fb-acc__user\">\n                                            {{userName || 'User'}}\n                                            <div class=\"icon cn-glyph-menu-down\"></div>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"fb-main\">\n\t\t\t<div class=\"fb-main__container\">\n\t\t\t<!-- ===================================================================\n\t\t\tStart: Main Menu Content \n\t\t\t==================================================================== -->\n\t\t\t<div class=\"fb-main__content\">\n\t\t\t\t<div class=\"fb-db\">\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Header\n\t\t\t\t\t============================================================= -->\n\t\t\t\t\t<div class=\"fb-dp__header\">\n\t\t\t\t\t\t<div class=\"fb-dp__search\">\n\t\t\t\t\t\t\t<span class=\"icon cn-glyph-search\"></span>\n\t\t\t\t\t\t\t<span style=\"margin-left: 6px;\">Search...</span>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t</div>\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Header\n\t\t\t\t\t============================================================ -->\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Content\n\t\t\t\t\t============================================================ -->\n\t\t\t\t\t<div class=\"fb-dp__content\">\n\t\t\t\t\t\t<div class=\"fb-dp__title\"></div>\n\t\t\t\t\t\t<!-- =======================================================\n\t\t\t\t\t\tStart: Content Table\n\t\t\t\t\t\t======================================================== -->\n\t\t\t\t\t\t<div class=\"fb-table\">\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tStart: Header Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t<div class=\"fb-table__header\">\n\t\t\t\t\t\t\t\t<div class=\"fb-table__row\">\n\t\t\t\t\t\t\t\t\t<div class=\"fb-table__col\">\n\t\t\t\t\t\t\t\t\t\tRestaurants\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"fb-table__col\">\n\t\t\t\t\t\t\t\t\t\tRating\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tEnd: Header Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tStart: Content Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t<div class=\"fb-table__content\">\n\t\t\t\t\t\t\t\t <div class=\"fb-rest active\" v-for=\"(hotel, index) in hotels\" v-bind:key=\"index\">\n                                        <!-- ===========================================\n                                        Start: Menu\n                                        ============================================ -->\n                                        <div class=\"fb-rest__header\">\n                                            <div class=\"fb-rest__row\">\n                                                <!-- ===================================\n                                                Start: Rest\n                                                ==================================== -->\n                                                <div class=\"fb-rest__col\">\n                                                    <div class=\"fb-htl\">\n                                                        <div class=\"fb-htl__figure\" style=\"background-image: url('/local-assets/app/modules/images/fb/1.jpg\">\n                                                        </div>\n                                                        <div class=\"fb-htl__name\">\n                                                            {{hotel.name}}\n                                                        </div>\n                                                    </div>\n                                                </div>\n                                                <!-- ===================================\n                                                End: Rest\n                                                ==================================== -->\n                                                <!-- ===================================\n                                                Start: Rating\n                                                ==================================== -->\n                                                    <div class=\"fb-rest__col\">\n                                                        \n                                                    </div>\n                                                <!-- ===================================\n                                                End: Rating\n                                                ==================================== -->\n                                            </div>\n                                        </div>\n                                        <!-- ===========================================\n                                        End: Menu\n                                        ============================================ -->\n                                        <!-- ===========================================\n                                        Start: Menu Content\n                                        ============================================ -->\n                                        <div class=\"fb-rest__content\">\n                                            <div class=\"fb-item\">\n                                                <div class=\"fb-item__row\">\n                                                    <!-- ===========================================\n                                                    Start: Menu col\n                                                    ============================================ -->\n                                                    <div class=\"fb-item__col\" v-for=\"(item, index) in hotel.items\" v-bind:key=\"index\">\n                                                        <!-- ===========================================\n                                                        Start: Menu Items\n                                                        ============================================ -->\n                                                        <div class=\"fb-menu-item\">\n                                                            <div class=\"fb-menu__figure\">\n                                                                <img src=\"/local-assets/app/modules/images/fb/13.png\" alt=\"\" class=\"img-responsive\">\n\n                                                                <div v-if=\"item.type == 'veg'\" class=\"fb-menu--veg\"></div>\n                                                                <div v-else class=\"fb-menu--nveg\"></div>\n                                                            </div>\n                                                            <div class=\"fb-menu__content\">\n                                                                <div class=\"fb-menu__text\">\n                                                                    <span>{{item.name}}</span>\n                                                                </div>\n                                                                <div class=\"fb-menu__price\">\n                                                                    Rs. {{item.price}}\n                                                                </div>\n                                                            </div>\n\n                                                            <!-- ===========================================\n                                                                Menu Action\n                                                            ============================================ -->\n                                                            <div class=\"fb-menu__actions\">\n                                                                <div class=\"fb-menu__actions\">\n\t\t                                    \t\t\t\t\t\t<div class=\"fb-menu__action fb-icon fb-add\" @click=\"addToCart(item)\">\n\t\t                                    \t\t\t\t\t\t\tAdd\n\t\t                                    \t\t\t\t\t\t</div>\n                                                                </div>\n                                                            </div>\n                                                        </div>\n                                                        <!-- ===========================================\n                                                        End: Menu Items\n                                                        ============================================ -->\n                                                    </div>\n                                                    <!-- ===========================================\n                                                    End: Menu col\n                                                    ============================================ -->\n                                                </div>\n                                            </div>\n                                        </div>\n                                        <!-- ===========================================\n                                        End: Menu Content\n                                        ============================================ -->\n                                    </div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tEnd: Content Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<!-- =======================================================\n\t\t\t\t\t\tEnd: Content Table\n\t\t\t\t\t\t======================================================== -->\n\t\t\t\t\t</div>\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tEnd: Content\n\t\t\t\t\t============================================================ -->\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<!-- ===================================================================\n\t\t\tEnd: Main Menu Content \n\t\t\t==================================================================== -->\n\t\t\t <!-- =======================================================================\n\t\tStart: Main Cart \n\t\t======================================================================== -->\n\t\t<div class=\"fb-cart\" >\n\t\t\t<div class=\"fb-cart__icon\" @click=\"showCart = !showCart\">\n\t\t\t\t<div class=\"fb-cart__number\" v-if=\"isCartItemPresent\">{{cartItems.length}}</div>\n\t\t\t\t<div>\n\t\t\t\t\t<img src=\"/local-assets/app/modules/images/fb/cart.png\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"fb-order\" :class=\"{'fb-order--active':showCart}\">\n\t\t\t\t<div v-if=\"isCartItemPresent\">\n\t\t\t\t\t<div class=\"fb-order__header\">\n\t\t\t\t\t\tYour Order\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"fb-order__content\">\n\t\t\t\t\t\t<!-- =======================================================================\n\t\t\t\t\t\tStart: item\n\t\t\t\t\t\t======================================================================== -->\n\t\t\t\t\t\t<div class=\"fb-order__item\" v-for=\"(item, index) in cartItems\" v-bind:key=\"index\">\n\t\t\t\t\t\t\t<div class=\"fb-order__main\">\n\t\t\t\t\t\t\t\t<div class=\"fb-order__name\">\n\t\t\t\t\t\t\t\t\t{{item.name}}\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"fb-quantity\">\n\t\t\t\t\t\t\t\t\t<div class=\"fb-quantity__select\">\n\t\t\t\t\t\t\t\t\t\t<select v-model=\"item.quantity\">\n\t\t\t\t\t\t\t\t\t\t\t<option value=\"1\">1</option>\n\t\t\t\t\t\t\t\t\t\t\t<option value=\"2\">2</option>\n\t\t\t\t\t\t\t\t\t\t\t<option value=\"3\">3</option>\n\t\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t\t\t&times;\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"fb-quantity__amount\">\n\t\t\t\t\t\t\t\t\t\tRs {{item.price}}.00\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"fb-order__aside\">\n\t\t\t\t\t\t\t\tRs {{item.price * (item.quantity|| 1)}}.00\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"fb-order__item\">\n\t\t\t\t\t\t\t<div class=\"fb-order__main\">\n\t\t\t\t\t\t\t\t<div class=\"fb-order__name\">\n\t\t\t\t\t\t\t\t\tTotal\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"fb-order__aside\" style=\"color: #000; font-size: 16px; \">\n\t\t\t\t\t\t\t\tRs {{getTotoal}}.00\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<!-- =======================================================================\n\t\t\t\t\t\tEnd: Item\n\t\t\t\t\t\t======================================================================== -->\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"fb-order__footer\">\n\t\t\t\t\t\t<div class=\"fb-cbtn fb-cbtn--po\">\n\t\t\t\t\t\t\tPlace Order\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"fb-cbtn fb-cbtn--cancel\">\n\t\t\t\t\t\t\tReset Cart\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div v-else>\n\t\t\t\t\tYour cart is Empty. Please choose items to order.\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- =======================================================================\n\t\tEnd: Main Cart \n\t\t======================================================================== -->\n\t\t\t</div>\n\t\t</div>\n            </div>\n            <!-- =======================================================================\n            End: FB \n            ======================================================================== -->\n        </div>\n        <!-- <div class=\"cn-btn cn-btn--primary\" @click=\"showCreateItemModalBox = true\">Create Item</div>\n        <create-item v-if=\"showCreateItemModalBox\" @closeCreateItemModalDialog= \"closeCreateItemModalDialog()\"/> -->\n    </div>\n</template>\n<script lang=\"ts\">\n\nimport Vue from 'vue';\nimport Vuex from \"vuex\";\nimport Component from 'vue-class-component';\nimport CreateItemModal from \"@/components/CreateItemModal.vue\";\nimport {Hotel, Item, OrderItem, Cart} from 'store/types/common';\nimport * as app from \"@/store/app\";\n\n\n@Component({\n        props: {\n        },\n        components: {\n            // 'cb-placeholder': Placeholder,\n            'create-item':CreateItemModal\n        },\n        name: 'food-bee-app'\n    })\nexport default class FoodbeePage extends Vue {\n    showCreateItemModalBox: boolean = false;\n\tshowCart: boolean= false;\n    \n    closeCreateItemModalDialog(){\n        this.showCreateItemModalBox = false;\n    }\n    get userName():string{\n        console.log(app.getUser(this.$store));\n        return app.getUser(this.$store).name;\n    }\n\n    get hotels(): Array<Hotel>{\n        return app.getHotels(this.$store);\n    }\n    created(){\n        app.getCompayUserConf(this.$store).then(data=>{\n        }); \n\t}\n\tget getcart(): Cart{\n\t\treturn app.getCart(this.$store);\n\t}\n\tget cartItems(): Array<OrderItem>{\n\t\tlet cart = this.getcart;\n\t\treturn cart && cart.items;\n\t}\n\tget isCartItemPresent():boolean{\n\t\treturn this.cartItems && this.cartItems.length > 0;\n\t}\n\tget getTotoal(): number{\n\t\tlet total = 0;\n\t\tthis.cartItems.forEach((item) =>{\n\t\t\t\ttotal = total + (item.price * item.quantity);\n\t\t})\n\t\treturn total;\n\t}\n\taddToCart(item: Item){\n\t\tapp.addToCart(this.$store, {item: item, qty: 1}).then((data)=>{\n\n\t\t})\n\t}\n}\n</script>\n\n<style>\n  .cn-wrapper__header,\n    .cn-wrapper__footer{\n        display: none;\n    }\t\n</style>\n\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.cn-wrapper__header,\n  .cn-wrapper__footer{\n      display: none;\n}\t\n", "", {"version":3,"sources":["/Users/cb-karthikeyan/food/eebdoof/src/components/FoodbeePage.vue?42741432"],"names":[],"mappings":";AAyYA;;MAEA,cAAA;CACA","file":"FoodbeePage.vue","sourcesContent":["<template>\n    <div>\n        <div class=\"fbs\">\n            <!-- =======================================================================\n            Start: FB \n            ======================================================================== -->\n            <div class=\"fb-container\">\n                <!-- =======================================================================\n                Start: Main Header \n                ======================================================================== -->\n                <div class=\"fb-header\">\n                    <div class=\"fb-header__container\">\n                        <div class=\"fb-header__main\">\n                            <div class=\"fb-header__logo\">\n                                <img src=\"/local-assets/app/modules/images/fb/fb-loogo.png\" alt=\"\" class=\"img-responsive\">\n                            </div>\n                        </div>\n                        <div class=\"fb-header__actions\">\n                            <div class=\"fb-header__action\">\n                                <div class=\"fb-notify\">\n                                    <div class=\"icon cn-glyph-bell\"></div>\n                                </div>\n                            </div>\n                            <div class=\"fb-header__action fb-track\" @click=\"showOderPage = !showOderPage\">\n                                My Orders\n                            </div>\n                            <div class=\"fb-header__action\">\n                                <div class=\"fb-acc\">\n                                    <div class=\"fb-acc__figure\">\n                                        <img src=\"/local-assets/app/modules/images/fb/avt.jpg\" alt=\"\" class=\"img-responsive\">\n                                    </div>\n                                    <div class=\"fb-acc__content\">\n                                        <div class=\"fb-acc__user\">\n                                            {{userName || 'User'}}\n                                            <div class=\"icon cn-glyph-menu-down\"></div>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n\t\t\t\t<your-order v-if=\"showOderPage\"/>\n                <div class=\"fb-main\" v-if=\"!showOderPage\">\n\t\t\t<div class=\"fb-main__container\">\n\t\t\t<!-- ===================================================================\n\t\t\tStart: Main Menu Content \n\t\t\t==================================================================== -->\n\t\t\t<div class=\"fb-main__content\">\n\t\t\t\t<div class=\"fb-db\">\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Header\n\t\t\t\t\t============================================================= -->\n\t\t\t\t\t<div class=\"fb-dp__header\">\n\t\t\t\t\t\t<div class=\"fb-dp__search\">\n\t\t\t\t\t\t\t<span class=\"icon cn-glyph-search\"></span>\n\t\t\t\t\t\t\t<span style=\"margin-left: 6px;\">Search...</span>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t</div>\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Header\n\t\t\t\t\t============================================================ -->\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Content\n\t\t\t\t\t============================================================ -->\n\t\t\t\t\t<div class=\"fb-dp__content\">\n\t\t\t\t\t\t<div class=\"fb-dp__title\"></div>\n\t\t\t\t\t\t<!-- =======================================================\n\t\t\t\t\t\tStart: Content Table\n\t\t\t\t\t\t======================================================== -->\n\t\t\t\t\t\t<div class=\"fb-table\">\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tStart: Header Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t<div class=\"fb-table__header\">\n\t\t\t\t\t\t\t\t<div class=\"fb-table__row\">\n\t\t\t\t\t\t\t\t\t<div class=\"fb-table__col\">\n\t\t\t\t\t\t\t\t\t\tRestaurants\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"fb-table__col\">\n\t\t\t\t\t\t\t\t\t\tRating\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tEnd: Header Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tStart: Content Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t<div class=\"fb-table__content\">\n\t\t\t\t\t\t\t\t <div class=\"fb-rest\" v-for=\"(hotel, index) in hotels\" v-bind:key=\"index\" :data-hotels=\"hotel.id\">\n                                        <!-- ===========================================\n                                        Start: Menu\n                                        ============================================ -->\n                                        <div class=\"fb-rest__header\">\n                                            <div class=\"fb-rest__row\">\n                                                <!-- ===================================\n                                                Start: Rest\n                                                ==================================== -->\n                                                <div class=\"fb-rest__col\">\n                                                    <div class=\"fb-htl\">\n                                                        <div class=\"fb-htl__figure\" style=\"background-image: url('/local-assets/app/modules/images/fb/1.jpg\">\n                                                        </div>\n                                                        <div class=\"fb-htl__name\">\n                                                            {{hotel.name}}\n                                                        </div>\n                                                    </div>\n                                                </div>\n                                                <!-- ===================================\n                                                End: Rest\n                                                ==================================== -->\n                                                <!-- ===================================\n                                                Start: Rating\n                                                ==================================== -->\n                                                    <div class=\"fb-rest__col\">\n                                                        <div class=\"fb-rating\" v-if=\"index==0\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star cn-glyph-star-outline\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star cn-glyph-star-outline\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"fb-rating\" v-if=\"index==1\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star-half\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"fb-rating\" v-if=\"index==2\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"icon cn-glyph-star\"></span>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>\n                                                    </div>\n                                                <!-- ===================================\n                                                End: Rating\n                                                ==================================== -->\n                                            </div>\n                                        </div>\n                                        <!-- ===========================================\n                                        End: Menu\n                                        ============================================ -->\n                                        <!-- ===========================================\n                                        Start: Menu Content\n                                        ============================================ -->\n                                        <div class=\"fb-rest__content\">\n                                            <div class=\"fb-item\">\n                                                <div class=\"fb-item__row\">\n                                                    <!-- ===========================================\n                                                    Start: Menu col\n                                                    ============================================ -->\n                                                    <div class=\"fb-item__col\" v-for=\"(item, index) in hotel.items\" v-bind:key=\"index\">\n                                                        <!-- ===========================================\n                                                        Start: Menu Items\n                                                        ============================================ -->\n                                                        <div class=\"fb-menu-item\">\n                                                            <div class=\"fb-menu__figure\">\n                                                                <img src=\"/local-assets/app/modules/images/fb/13.png\" alt=\"\" class=\"img-responsive\">\n\n                                                                <div v-if=\"item.type == 'veg'\" class=\"fb-menu--veg\"></div>\n                                                                <div v-else class=\"fb-menu--nveg\"></div>\n                                                            </div>\n                                                            <div class=\"fb-menu__content\">\n                                                                <div class=\"fb-menu__text\">\n                                                                    <span>{{item.name}}</span>\n                                                                </div>\n                                                                <div class=\"fb-menu__price\">\n                                                                    Rs. {{item.price}}\n                                                                </div>\n                                                            </div>\n\n                                                            <!-- ===========================================\n                                                                Menu Action\n                                                            ============================================ -->\n                                                            <div class=\"fb-menu__actions\">\n                                                                <div class=\"fb-menu__actions\">\n\t\t                                    \t\t\t\t\t\t<div class=\"fb-menu__action fb-icon fb-add\" @click=\"addToCart(item)\">\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t{{getAddItemText(item)}}\n\t\t                                    \t\t\t\t\t\t</div>\n                                                                </div>\n                                                            </div>\n                                                        </div>\n                                                        <!-- ===========================================\n                                                        End: Menu Items\n                                                        ============================================ -->\n                                                    </div>\n                                                    <!-- ===========================================\n                                                    End: Menu col\n                                                    ============================================ -->\n                                                </div>\n                                            </div>\n                                        </div>\n                                        <!-- ===========================================\n                                        End: Menu Content\n                                        ============================================ -->\n                                </div>\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tEnd: Content Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<!-- =======================================================\n\t\t\t\t\t\tEnd: Content Table\n\t\t\t\t\t\t======================================================== -->\n\t\t\t\t\t</div>\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tEnd: Content\n\t\t\t\t\t============================================================ -->\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<!-- ===================================================================\n\t\t\tEnd: Main Menu Content \n\t\t\t==================================================================== -->\n\t\t\t <!-- =======================================================================\n\t\tStart: Main Cart \n\t\t======================================================================== -->\n\t\t<div class=\"fb-cart\" >\n\t\t\t<div class=\"fb-cart__icon\" @click=\"showCart = !showCart\">\n\t\t\t\t<div class=\"fb-cart__number\" v-if=\"isCartItemPresent\">{{cartItems.length}}</div>\n\t\t\t\t<div>\n\t\t\t\t\t<img src=\"/local-assets/app/modules/images/fb/cart.png\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"fb-order\" :class=\"{'fb-order--active':showCart}\">\n\t\t\t\t<div v-if=\"isCartItemPresent\">\n\t\t\t\t\t<div class=\"fb-order__header\">\n\t\t\t\t\t\tYour Order\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"fb-order__content\">\n\t\t\t\t\t\t<!-- =======================================================================\n\t\t\t\t\t\tStart: item\n\t\t\t\t\t\t======================================================================== -->\n\t\t\t\t\t\t<div class=\"fb-order__item\" v-for=\"(item, index) in cartItems\" v-bind:key=\"index\">\n\t\t\t\t\t\t\t<div class=\"fb-order__main\">\n\t\t\t\t\t\t\t\t<div class=\"fb-order__name\">\n\t\t\t\t\t\t\t\t\t{{item.item.name}}\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"fb-quantity\">\n\t\t\t\t\t\t\t\t\t<div class=\"fb-quantity__select\">\n\t\t\t\t\t\t\t\t\t\t<select v-model=\"item.quantity\">\n\t\t\t\t\t\t\t\t\t\t\t<option value=\"1\">1</option>\n\t\t\t\t\t\t\t\t\t\t\t<option value=\"2\">2</option>\n\t\t\t\t\t\t\t\t\t\t\t<option value=\"3\">3</option>\n\t\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t\t\t&times;\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t<div class=\"fb-quantity__amount\">\n\t\t\t\t\t\t\t\t\t\tRs {{item.item.price}}.00\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"fb-order__aside\">\n\t\t\t\t\t\t\t\tRs {{item.item.price * (item.quantity|| 1)}}.00\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t<div class=\"fb-order__item\">\n\t\t\t\t\t\t\t<div class=\"fb-order__main\">\n\t\t\t\t\t\t\t\t<div class=\"fb-order__name\">\n\t\t\t\t\t\t\t\t\tTotal\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"fb-order__aside\" style=\"color: #000; font-size: 16px; \">\n\t\t\t\t\t\t\t\tRs {{getTotoal}}.00\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<!-- =======================================================================\n\t\t\t\t\t\tEnd: Item\n\t\t\t\t\t\t======================================================================== -->\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"fb-order__footer\">\n\t\t\t\t\t\t<div class=\"fb-cbtn fb-cbtn--po\" @click=\"doPlaceOrder\">\n\t\t\t\t\t\t\tPlace Order\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"fb-cbtn fb-cbtn--cancel\" @click=\"doClearCart\">\n\t\t\t\t\t\t\tReset Cart\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<div v-else>\n\t\t\t\t\tYour cart is Empty. Please choose items to order.\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- =======================================================================\n\t\tEnd: Main Cart \n\t\t======================================================================== -->\n\t\t\t</div>\n\t\t</div>\n            </div>\n            <!-- =======================================================================\n            End: FB \n            ======================================================================== -->\n        </div>\n    </div>\n</template>\n<script lang=\"ts\">\n\nimport Vue from 'vue';\nimport Vuex from \"vuex\";\nimport Component from 'vue-class-component';\nimport CreateItemModal from \"@/components/CreateItemModal.vue\";\nimport YourOrder from \"@/components/YourOrder.vue\";\nimport {Hotel, Item, OrderItem, Cart} from 'store/types/common';\nimport * as app from \"@/store/app\";\n\n\n@Component({\n        props: {\n        },\n        components: {\n            // 'cb-placeholder': Placeholder,\n\t\t\t'create-item':CreateItemModal,\n\t\t\t'your-order': YourOrder\n        },\n        name: 'food-bee-app'\n    })\nexport default class FoodbeePage extends Vue {\n    showCreateItemModalBox: boolean = false;\n\tshowCart: boolean= false;\n\tcurrentTab = \"hotels\";\n\tshowOderPage: boolean = false;\n\t\n\n    closeCreateItemModalDialog(){\n        this.showCreateItemModalBox = false;\n    }\n    get userName():string{\n\t\tlet user = app.getUser(this.$store);\n        return user && user.name;\n    }\n\n    get hotels(): Array<Hotel>{\n        return app.getHotels(this.$store);\n\t}\n\tgetAddItemText(item: Item):string{\n\t\tthis.cartItems.forEach(_item=>{\n\t\t\tif(_item.item.id == item.id){\n\t\t\t\treturn \"Added\";\n\t\t\t}\n\t\t});\n\t\treturn \"Add\";\n\t}\n\tdoPlaceOrder(){\n\t\tlet _this = this;\n\t\tapp.placeOrder(this.$store).then(data => {\n\t\t\t_this.showOderPage = true;\n\t\t});\n\t}\n\tdoClearCart(){\n\t\tapp.resetOrder(this.$store).then(data=>{\n\n\t\t});\n\t}\n    created(){\n        app.getCompayUserConf(this.$store).then(data=>{\n        }); \n\t}\n\tget getcart(): Cart{\n\t\treturn app.getCart(this.$store);\n\t}\n\tget cartItems(): Array<OrderItem>{\n\t\tlet cart = this.getcart;\n\t\treturn cart && cart.items;\n\t}\n\tget isCartItemPresent():boolean{\n\t\treturn this.cartItems && this.cartItems.length > 0;\n\t}\n\tget getTotoal(): number{\n\t\tlet total = 0;\n\t\tthis.cartItems.forEach((item) =>{\n\t\t\t\ttotal = total + (item.item.price * item.quantity);\n\t\t})\n\t\treturn total;\n\t}\n\taddToCart(item: Item){\n\t\tlet _this = this;\n\t\tapp.addToCart(this.$store, {item: item, qty: 1}).then((data)=>{\n\t\t\t_this.showCart = true;\n\t\t})\n\t}\n}\n</script>\n\n<style>\n  .cn-wrapper__header,\n    .cn-wrapper__footer{\n        display: none;\n    }\t\n</style>\n\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -10979,7 +10981,8 @@ module.exports = function listToStyles(parentId, list) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_class_component__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_class_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_class_component__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_CreateItemModal_vue__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__store_app__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_YourOrder_vue__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__store_app__ = __webpack_require__(4);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -11002,17 +11005,20 @@ var __decorate = this && this.__decorate || function (decorators, target, key, d
 
 
 
+
 var FoodbeePage = function (_Vue) {
     _inherits(FoodbeePage, _Vue);
 
     function FoodbeePage() {
         _classCallCheck(this, FoodbeePage);
 
-        var _this = _possibleConstructorReturn(this, (FoodbeePage.__proto__ || Object.getPrototypeOf(FoodbeePage)).apply(this, arguments));
+        var _this2 = _possibleConstructorReturn(this, (FoodbeePage.__proto__ || Object.getPrototypeOf(FoodbeePage)).apply(this, arguments));
 
-        _this.showCreateItemModalBox = false;
-        _this.showCart = false;
-        return _this;
+        _this2.showCreateItemModalBox = false;
+        _this2.showCart = false;
+        _this2.currentTab = "hotels";
+        _this2.showOderPage = false;
+        return _this2;
     }
 
     _createClass(FoodbeePage, [{
@@ -11021,30 +11027,56 @@ var FoodbeePage = function (_Vue) {
             this.showCreateItemModalBox = false;
         }
     }, {
+        key: "getAddItemText",
+        value: function getAddItemText(item) {
+            this.cartItems.forEach(function (_item) {
+                if (_item.item.id == item.id) {
+                    return "Added";
+                }
+            });
+            return "Add";
+        }
+    }, {
+        key: "doPlaceOrder",
+        value: function doPlaceOrder() {
+            var _this = this;
+            __WEBPACK_IMPORTED_MODULE_4__store_app__["i" /* placeOrder */](this.$store).then(function (data) {
+                _this.showOderPage = true;
+            });
+        }
+    }, {
+        key: "doClearCart",
+        value: function doClearCart() {
+            __WEBPACK_IMPORTED_MODULE_4__store_app__["j" /* resetOrder */](this.$store).then(function (data) {});
+        }
+    }, {
         key: "created",
         value: function created() {
-            __WEBPACK_IMPORTED_MODULE_3__store_app__["e" /* getCompayUserConf */](this.$store).then(function (data) {});
+            __WEBPACK_IMPORTED_MODULE_4__store_app__["e" /* getCompayUserConf */](this.$store).then(function (data) {});
         }
     }, {
         key: "addToCart",
         value: function addToCart(item) {
-            __WEBPACK_IMPORTED_MODULE_3__store_app__["a" /* addToCart */](this.$store, { item: item, qty: 1 }).then(function (data) {});
+            var _this = this;
+            __WEBPACK_IMPORTED_MODULE_4__store_app__["a" /* addToCart */](this.$store, { item: item, qty: 1 }).then(function (data) {
+                _this.showCart = true;
+            });
         }
     }, {
         key: "userName",
         get: function get() {
-            console.log(__WEBPACK_IMPORTED_MODULE_3__store_app__["h" /* getUser */](this.$store));
-            return __WEBPACK_IMPORTED_MODULE_3__store_app__["h" /* getUser */](this.$store).name;
+            var user = __WEBPACK_IMPORTED_MODULE_4__store_app__["h" /* getUser */](this.$store);
+            return user && user.name;
         }
     }, {
         key: "hotels",
         get: function get() {
-            return __WEBPACK_IMPORTED_MODULE_3__store_app__["g" /* getHotels */](this.$store);
+            return __WEBPACK_IMPORTED_MODULE_4__store_app__["g" /* getHotels */](this.$store);
         }
     }, {
         key: "getcart",
         get: function get() {
-            return __WEBPACK_IMPORTED_MODULE_3__store_app__["d" /* getCart */](this.$store);
+            return __WEBPACK_IMPORTED_MODULE_4__store_app__["d" /* getCart */](this.$store);
         }
     }, {
         key: "cartItems",
@@ -11062,7 +11094,7 @@ var FoodbeePage = function (_Vue) {
         get: function get() {
             var total = 0;
             this.cartItems.forEach(function (item) {
-                total = total + item.price * item.quantity;
+                total = total + item.item.price * item.quantity;
             });
             return total;
         }
@@ -11074,7 +11106,8 @@ FoodbeePage = __decorate([__WEBPACK_IMPORTED_MODULE_1_vue_class_component___defa
     props: {},
     components: {
         // 'cb-placeholder': Placeholder,
-        'create-item': __WEBPACK_IMPORTED_MODULE_2__components_CreateItemModal_vue__["a" /* default */]
+        'create-item': __WEBPACK_IMPORTED_MODULE_2__components_CreateItemModal_vue__["a" /* default */],
+        'your-order': __WEBPACK_IMPORTED_MODULE_3__components_YourOrder_vue__["a" /* default */]
     },
     name: 'food-bee-app'
 })], FoodbeePage);
@@ -11189,7 +11222,7 @@ var CreateItemModal = function (_Vue) {
             var data = {
                 conf: _this.item
             };
-            var p = this.item.id ? __WEBPACK_IMPORTED_MODULE_5__store_app__["i" /* updateItem */](this.$store, { _data: data }) : __WEBPACK_IMPORTED_MODULE_5__store_app__["c" /* createFoodItem */](this.$store, { _data: data });
+            var p = this.item.id ? __WEBPACK_IMPORTED_MODULE_5__store_app__["k" /* updateItem */](this.$store, { _data: data }) : __WEBPACK_IMPORTED_MODULE_5__store_app__["c" /* createFoodItem */](this.$store, { _data: data });
             p.then(function (data) {
                 _this3.showLoader = false;
                 _this3.closeModal();
@@ -11716,9 +11749,11 @@ if (false) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return createFoodItem; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return getHotelUserConf; });
 /* unused harmony export deleteFoodItem */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return updateItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return updateItem; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return addToCart; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getCompayUserConf; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return placeOrder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return resetOrder; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex_typescript__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex_typescript___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vuex_typescript__);
@@ -11853,10 +11888,36 @@ var app = {
             });
             return promiseWrapper.then(function () {
                 return __WEBPACK_IMPORTED_MODULE_2__cb_client__["a" /* default */].app.get_user_info({}, {}).then(function (data) {
-                    setCart(context, data.cart);
-                    setUser(context, data.user);
-                    setHotels(context, data.hotels);
-                    setOreders(context, data.orders);
+                    setCart(context, data.info.cart);
+                    setUser(context, data.info.user);
+                    setHotels(context, data.info.hotels);
+                    setOreders(context, data.info.orders);
+                });
+            });
+        },
+        placeOrder: function placeOrder(context) {
+            var promiseWrapper = new Promise(function (resolve, reject) {
+                return resolve(true);
+            });
+            return promiseWrapper.then(function () {
+                return __WEBPACK_IMPORTED_MODULE_2__cb_client__["a" /* default */].app.place_order({}, {}).then(function (data) {
+                    setCart(context, data.info.cart);
+                    setUser(context, data.info.user);
+                    setHotels(context, data.info.hotels);
+                    setOreders(context, data.info.orders);
+                });
+            });
+        },
+        resetOrder: function resetOrder(context) {
+            var promiseWrapper = new Promise(function (resolve, reject) {
+                return resolve(true);
+            });
+            return promiseWrapper.then(function () {
+                return __WEBPACK_IMPORTED_MODULE_2__cb_client__["a" /* default */].app.reset_cart({}).then(function (data) {
+                    setCart(context, data.info.cart);
+                    setUser(context, data.info.user);
+                    setHotels(context, data.info.hotels);
+                    setOreders(context, data.info.orders);
                 });
             });
         }
@@ -11890,6 +11951,8 @@ var deleteFoodItem = dispatch(actions.deleteFoodItem);
 var updateItem = dispatch(actions.updateItem);
 var addToCart = dispatch(actions.addToCart);
 var getCompayUserConf = dispatch(actions.getCompayUserConf);
+var placeOrder = dispatch(actions.placeOrder);
+var resetOrder = dispatch(actions.resetOrder);
 
 /***/ }),
 /* 37 */
@@ -12003,6 +12066,18 @@ var apis = [{
         method: "post",
         endpointFn: function endpointFn(params) {
             return "/foodbees/add_to_cart";
+        }
+    }, {
+        name: "place_order",
+        method: "post",
+        endpointFn: function endpointFn(params) {
+            return "/foodbees/place_order";
+        }
+    }, {
+        name: "reset_cart",
+        method: "post",
+        endpointFn: function endpointFn(params) {
+            return "/foodbees/reset_cart";
         }
     }, {
         name: "get_user_info",
@@ -13473,194 +13548,379 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", { staticClass: "fbs" }, [
-      _c("div", { staticClass: "fb-container" }, [
-        _c("div", { staticClass: "fb-header" }, [
-          _c("div", { staticClass: "fb-header__container" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("div", { staticClass: "fb-header__actions" }, [
-              _vm._m(1),
+      _c(
+        "div",
+        { staticClass: "fb-container" },
+        [
+          _c("div", { staticClass: "fb-header" }, [
+            _c("div", { staticClass: "fb-header__container" }, [
+              _vm._m(0),
               _vm._v(" "),
-              _c("div", { staticClass: "fb-header__action fb-track" }, [
-                _vm._v(
-                  "\n                                My Orders\n                            "
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "fb-header__action" }, [
-                _c("div", { staticClass: "fb-acc" }, [
-                  _vm._m(2),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "fb-acc__content" }, [
-                    _c("div", { staticClass: "fb-acc__user" }, [
-                      _vm._v(
-                        "\n                                            " +
-                          _vm._s(_vm.userName || "User") +
-                          "\n                                            "
-                      ),
-                      _c("div", { staticClass: "icon cn-glyph-menu-down" })
+              _c("div", { staticClass: "fb-header__actions" }, [
+                _vm._m(1),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "fb-header__action fb-track",
+                    on: {
+                      click: function($event) {
+                        _vm.showOderPage = !_vm.showOderPage
+                      }
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                                My Orders\n                            "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "fb-header__action" }, [
+                  _c("div", { staticClass: "fb-acc" }, [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "fb-acc__content" }, [
+                      _c("div", { staticClass: "fb-acc__user" }, [
+                        _vm._v(
+                          "\n                                            " +
+                            _vm._s(_vm.userName || "User") +
+                            "\n                                            "
+                        ),
+                        _c("div", { staticClass: "icon cn-glyph-menu-down" })
+                      ])
                     ])
                   ])
                 ])
               ])
             ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "fb-main" }, [
-          _c("div", { staticClass: "fb-main__container" }, [
-            _c("div", { staticClass: "fb-main__content" }, [
-              _c("div", { staticClass: "fb-db" }, [
-                _vm._m(3),
-                _vm._v(" "),
-                _c("div", { staticClass: "fb-dp__content" }, [
-                  _c("div", { staticClass: "fb-dp__title" }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "fb-table" }, [
-                    _vm._m(4),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "fb-table__content" },
-                      _vm._l(_vm.hotels, function(hotel, index) {
-                        return _c(
-                          "div",
-                          { key: index, staticClass: "fb-rest active" },
-                          [
-                            _c("div", { staticClass: "fb-rest__header" }, [
-                              _c("div", { staticClass: "fb-rest__row" }, [
-                                _c("div", { staticClass: "fb-rest__col" }, [
-                                  _c("div", { staticClass: "fb-htl" }, [
-                                    _c("div", {
-                                      staticClass: "fb-htl__figure",
-                                      staticStyle: {
-                                        "background-image":
-                                          "url('/local-assets/app/modules/images/fb/1.jpg"
-                                      }
-                                    }),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "fb-htl__name" }, [
-                                      _vm._v(
-                                        "\n                                                            " +
-                                          _vm._s(hotel.name) +
-                                          "\n                                                        "
+          ]),
+          _vm._v(" "),
+          _vm.showOderPage ? _c("your-order") : _vm._e(),
+          _vm._v(" "),
+          !_vm.showOderPage
+            ? _c("div", { staticClass: "fb-main" }, [
+                _c("div", { staticClass: "fb-main__container" }, [
+                  _c("div", { staticClass: "fb-main__content" }, [
+                    _c("div", { staticClass: "fb-db" }, [
+                      _vm._m(3),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "fb-dp__content" }, [
+                        _c("div", { staticClass: "fb-dp__title" }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "fb-table" }, [
+                          _vm._m(4),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "fb-table__content" },
+                            _vm._l(_vm.hotels, function(hotel, index) {
+                              return _c(
+                                "div",
+                                {
+                                  key: index,
+                                  staticClass: "fb-rest",
+                                  attrs: { "data-hotels": hotel.id }
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "fb-rest__header" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "fb-rest__row" },
+                                        [
+                                          _c(
+                                            "div",
+                                            { staticClass: "fb-rest__col" },
+                                            [
+                                              _c(
+                                                "div",
+                                                { staticClass: "fb-htl" },
+                                                [
+                                                  _c("div", {
+                                                    staticClass:
+                                                      "fb-htl__figure",
+                                                    staticStyle: {
+                                                      "background-image":
+                                                        "url('/local-assets/app/modules/images/fb/1.jpg"
+                                                    }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "div",
+                                                    {
+                                                      staticClass:
+                                                        "fb-htl__name"
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                                            " +
+                                                          _vm._s(hotel.name) +
+                                                          "\n                                                        "
+                                                      )
+                                                    ]
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "div",
+                                            { staticClass: "fb-rest__col" },
+                                            [
+                                              index == 0
+                                                ? _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "fb-rating"
+                                                    },
+                                                    [
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star cn-glyph-star-outline"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star cn-glyph-star-outline"
+                                                      })
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              index == 1
+                                                ? _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "fb-rating"
+                                                    },
+                                                    [
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star-half"
+                                                      })
+                                                    ]
+                                                  )
+                                                : _vm._e(),
+                                              _vm._v(" "),
+                                              index == 2
+                                                ? _c(
+                                                    "div",
+                                                    {
+                                                      staticClass: "fb-rating"
+                                                    },
+                                                    [
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      }),
+                                                      _vm._v(" "),
+                                                      _c("span", {
+                                                        staticClass:
+                                                          "icon cn-glyph-star"
+                                                      })
+                                                    ]
+                                                  )
+                                                : _vm._e()
+                                            ]
+                                          )
+                                        ]
                                       )
-                                    ])
-                                  ])
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "fb-rest__col" })
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "fb-rest__content" }, [
-                              _c("div", { staticClass: "fb-item" }, [
-                                _c(
-                                  "div",
-                                  { staticClass: "fb-item__row" },
-                                  _vm._l(hotel.items, function(item, index) {
-                                    return _c(
-                                      "div",
-                                      {
-                                        key: index,
-                                        staticClass: "fb-item__col"
-                                      },
-                                      [
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "fb-rest__content" },
+                                    [
+                                      _c("div", { staticClass: "fb-item" }, [
                                         _c(
                                           "div",
-                                          { staticClass: "fb-menu-item" },
-                                          [
-                                            _c(
+                                          { staticClass: "fb-item__row" },
+                                          _vm._l(hotel.items, function(
+                                            item,
+                                            index
+                                          ) {
+                                            return _c(
                                               "div",
                                               {
-                                                staticClass: "fb-menu__figure"
-                                              },
-                                              [
-                                                _c("img", {
-                                                  staticClass: "img-responsive",
-                                                  attrs: {
-                                                    src:
-                                                      "/local-assets/app/modules/images/fb/13.png",
-                                                    alt: ""
-                                                  }
-                                                }),
-                                                _vm._v(" "),
-                                                item.type == "veg"
-                                                  ? _c("div", {
-                                                      staticClass:
-                                                        "fb-menu--veg"
-                                                    })
-                                                  : _c("div", {
-                                                      staticClass:
-                                                        "fb-menu--nveg"
-                                                    })
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              {
-                                                staticClass: "fb-menu__content"
+                                                key: index,
+                                                staticClass: "fb-item__col"
                                               },
                                               [
                                                 _c(
                                                   "div",
                                                   {
-                                                    staticClass: "fb-menu__text"
-                                                  },
-                                                  [
-                                                    _c("span", [
-                                                      _vm._v(_vm._s(item.name))
-                                                    ])
-                                                  ]
-                                                ),
-                                                _vm._v(" "),
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "fb-menu__price"
-                                                  },
-                                                  [
-                                                    _vm._v(
-                                                      "\n                                                                    Rs. " +
-                                                        _vm._s(item.price) +
-                                                        "\n                                                                "
-                                                    )
-                                                  ]
-                                                )
-                                              ]
-                                            ),
-                                            _vm._v(" "),
-                                            _c(
-                                              "div",
-                                              {
-                                                staticClass: "fb-menu__actions"
-                                              },
-                                              [
-                                                _c(
-                                                  "div",
-                                                  {
-                                                    staticClass:
-                                                      "fb-menu__actions"
+                                                    staticClass: "fb-menu-item"
                                                   },
                                                   [
                                                     _c(
                                                       "div",
                                                       {
                                                         staticClass:
-                                                          "fb-menu__action fb-icon fb-add",
-                                                        on: {
-                                                          click: function(
-                                                            $event
-                                                          ) {
-                                                            _vm.addToCart(item)
-                                                          }
-                                                        }
+                                                          "fb-menu__figure"
                                                       },
                                                       [
-                                                        _vm._v(
-                                                          "\n\t\t                                    \t\t\t\t\t\t\tAdd\n\t\t                                    \t\t\t\t\t\t"
+                                                        _c("img", {
+                                                          staticClass:
+                                                            "img-responsive",
+                                                          attrs: {
+                                                            src:
+                                                              "/local-assets/app/modules/images/fb/13.png",
+                                                            alt: ""
+                                                          }
+                                                        }),
+                                                        _vm._v(" "),
+                                                        item.type == "veg"
+                                                          ? _c("div", {
+                                                              staticClass:
+                                                                "fb-menu--veg"
+                                                            })
+                                                          : _c("div", {
+                                                              staticClass:
+                                                                "fb-menu--nveg"
+                                                            })
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "fb-menu__content"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "fb-menu__text"
+                                                          },
+                                                          [
+                                                            _c("span", [
+                                                              _vm._v(
+                                                                _vm._s(
+                                                                  item.name
+                                                                )
+                                                              )
+                                                            ])
+                                                          ]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "fb-menu__price"
+                                                          },
+                                                          [
+                                                            _vm._v(
+                                                              "\n                                                                    Rs. " +
+                                                                _vm._s(
+                                                                  item.price
+                                                                ) +
+                                                                "\n                                                                "
+                                                            )
+                                                          ]
+                                                        )
+                                                      ]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "fb-menu__actions"
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "div",
+                                                          {
+                                                            staticClass:
+                                                              "fb-menu__actions"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "div",
+                                                              {
+                                                                staticClass:
+                                                                  "fb-menu__action fb-icon fb-add",
+                                                                on: {
+                                                                  click: function(
+                                                                    $event
+                                                                  ) {
+                                                                    _vm.addToCart(
+                                                                      item
+                                                                    )
+                                                                  }
+                                                                }
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t" +
+                                                                    _vm._s(
+                                                                      _vm.getAddItemText(
+                                                                        item
+                                                                      )
+                                                                    ) +
+                                                                    "\n\t\t                                    \t\t\t\t\t\t"
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
                                                         )
                                                       ]
                                                     )
@@ -13668,217 +13928,280 @@ var render = function() {
                                                 )
                                               ]
                                             )
-                                          ]
+                                          })
                                         )
-                                      ]
-                                    )
-                                  })
-                                )
-                              ])
-                            ])
-                          ]
-                        )
-                      })
-                    )
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "fb-cart" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "fb-cart__icon",
-                  on: {
-                    click: function($event) {
-                      _vm.showCart = !_vm.showCart
-                    }
-                  }
-                },
-                [
-                  _vm.isCartItemPresent
-                    ? _c("div", { staticClass: "fb-cart__number" }, [
-                        _vm._v(_vm._s(_vm.cartItems.length))
-                      ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm._m(5)
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "fb-order",
-                  class: { "fb-order--active": _vm.showCart }
-                },
-                [
-                  _vm.isCartItemPresent
-                    ? _c("div", [
-                        _c("div", { staticClass: "fb-order__header" }, [
-                          _vm._v("\n\t\t\t\t\t\tYour Order\n\t\t\t\t\t")
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "fb-order__content" },
-                          [
-                            _vm._l(_vm.cartItems, function(item, index) {
-                              return _c(
-                                "div",
-                                { key: index, staticClass: "fb-order__item" },
-                                [
-                                  _c("div", { staticClass: "fb-order__main" }, [
-                                    _c(
-                                      "div",
-                                      { staticClass: "fb-order__name" },
-                                      [
-                                        _vm._v(
-                                          "\n\t\t\t\t\t\t\t\t\t" +
-                                            _vm._s(item.name) +
-                                            "\n\t\t\t\t\t\t\t\t"
-                                        )
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "fb-quantity" }, [
-                                      _c(
-                                        "div",
-                                        { staticClass: "fb-quantity__select" },
-                                        [
-                                          _c(
-                                            "select",
-                                            {
-                                              directives: [
-                                                {
-                                                  name: "model",
-                                                  rawName: "v-model",
-                                                  value: item.quantity,
-                                                  expression: "item.quantity"
-                                                }
-                                              ],
-                                              on: {
-                                                change: function($event) {
-                                                  var $$selectedVal = Array.prototype.filter
-                                                    .call(
-                                                      $event.target.options,
-                                                      function(o) {
-                                                        return o.selected
-                                                      }
-                                                    )
-                                                    .map(function(o) {
-                                                      var val =
-                                                        "_value" in o
-                                                          ? o._value
-                                                          : o.value
-                                                      return val
-                                                    })
-                                                  item.quantity = $event.target
-                                                    .multiple
-                                                    ? $$selectedVal
-                                                    : $$selectedVal[0]
-                                                }
-                                              }
-                                            },
-                                            [
-                                              _c(
-                                                "option",
-                                                { attrs: { value: "1" } },
-                                                [_vm._v("1")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "option",
-                                                { attrs: { value: "2" } },
-                                                [_vm._v("2")]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "option",
-                                                { attrs: { value: "3" } },
-                                                [_vm._v("3")]
-                                              )
-                                            ]
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("div", [
-                                        _vm._v(
-                                          "\n\t\t\t\t\t\t\t\t\t\t×\n\t\t\t\t\t\t\t\t\t"
-                                        )
-                                      ]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "fb-quantity__amount" },
-                                        [
-                                          _vm._v(
-                                            "\n\t\t\t\t\t\t\t\t\t\tRs " +
-                                              _vm._s(item.price) +
-                                              ".00\n\t\t\t\t\t\t\t\t\t"
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "fb-order__aside" },
-                                    [
-                                      _vm._v(
-                                        "\n\t\t\t\t\t\t\t\tRs " +
-                                          _vm._s(
-                                            item.price * (item.quantity || 1)
-                                          ) +
-                                          ".00\n\t\t\t\t\t\t\t"
-                                      )
+                                      ])
                                     ]
                                   )
                                 ]
                               )
-                            }),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "fb-order__item" }, [
-                              _vm._m(6),
+                            })
+                          )
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "fb-cart" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "fb-cart__icon",
+                        on: {
+                          click: function($event) {
+                            _vm.showCart = !_vm.showCart
+                          }
+                        }
+                      },
+                      [
+                        _vm.isCartItemPresent
+                          ? _c("div", { staticClass: "fb-cart__number" }, [
+                              _vm._v(_vm._s(_vm.cartItems.length))
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        _vm._m(5)
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "fb-order",
+                        class: { "fb-order--active": _vm.showCart }
+                      },
+                      [
+                        _vm.isCartItemPresent
+                          ? _c("div", [
+                              _c("div", { staticClass: "fb-order__header" }, [
+                                _vm._v("\n\t\t\t\t\t\tYour Order\n\t\t\t\t\t")
+                              ]),
                               _vm._v(" "),
                               _c(
                                 "div",
-                                {
-                                  staticClass: "fb-order__aside",
-                                  staticStyle: {
-                                    color: "#000",
-                                    "font-size": "16px"
-                                  }
-                                },
+                                { staticClass: "fb-order__content" },
                                 [
-                                  _vm._v(
-                                    "\n\t\t\t\t\t\t\t\tRs " +
-                                      _vm._s(_vm.getTotoal) +
-                                      ".00\n\t\t\t\t\t\t\t"
-                                  )
-                                ]
+                                  _vm._l(_vm.cartItems, function(item, index) {
+                                    return _c(
+                                      "div",
+                                      {
+                                        key: index,
+                                        staticClass: "fb-order__item"
+                                      },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "fb-order__main" },
+                                          [
+                                            _c(
+                                              "div",
+                                              { staticClass: "fb-order__name" },
+                                              [
+                                                _vm._v(
+                                                  "\n\t\t\t\t\t\t\t\t\t" +
+                                                    _vm._s(item.item.name) +
+                                                    "\n\t\t\t\t\t\t\t\t"
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "fb-quantity" },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "fb-quantity__select"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "select",
+                                                      {
+                                                        directives: [
+                                                          {
+                                                            name: "model",
+                                                            rawName: "v-model",
+                                                            value:
+                                                              item.quantity,
+                                                            expression:
+                                                              "item.quantity"
+                                                          }
+                                                        ],
+                                                        on: {
+                                                          change: function(
+                                                            $event
+                                                          ) {
+                                                            var $$selectedVal = Array.prototype.filter
+                                                              .call(
+                                                                $event.target
+                                                                  .options,
+                                                                function(o) {
+                                                                  return o.selected
+                                                                }
+                                                              )
+                                                              .map(function(o) {
+                                                                var val =
+                                                                  "_value" in o
+                                                                    ? o._value
+                                                                    : o.value
+                                                                return val
+                                                              })
+                                                            item.quantity = $event
+                                                              .target.multiple
+                                                              ? $$selectedVal
+                                                              : $$selectedVal[0]
+                                                          }
+                                                        }
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "option",
+                                                          {
+                                                            attrs: {
+                                                              value: "1"
+                                                            }
+                                                          },
+                                                          [_vm._v("1")]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "option",
+                                                          {
+                                                            attrs: {
+                                                              value: "2"
+                                                            }
+                                                          },
+                                                          [_vm._v("2")]
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "option",
+                                                          {
+                                                            attrs: {
+                                                              value: "3"
+                                                            }
+                                                          },
+                                                          [_vm._v("3")]
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c("div", [
+                                                  _vm._v(
+                                                    "\n\t\t\t\t\t\t\t\t\t\t×\n\t\t\t\t\t\t\t\t\t"
+                                                  )
+                                                ]),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "fb-quantity__amount"
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "\n\t\t\t\t\t\t\t\t\t\tRs " +
+                                                        _vm._s(
+                                                          item.item.price
+                                                        ) +
+                                                        ".00\n\t\t\t\t\t\t\t\t\t"
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "fb-order__aside" },
+                                          [
+                                            _vm._v(
+                                              "\n\t\t\t\t\t\t\t\tRs " +
+                                                _vm._s(
+                                                  item.item.price *
+                                                    (item.quantity || 1)
+                                                ) +
+                                                ".00\n\t\t\t\t\t\t\t"
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-order__item" }, [
+                                    _vm._m(6),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass: "fb-order__aside",
+                                        staticStyle: {
+                                          color: "#000",
+                                          "font-size": "16px"
+                                        }
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n\t\t\t\t\t\t\t\tRs " +
+                                            _vm._s(_vm.getTotoal) +
+                                            ".00\n\t\t\t\t\t\t\t"
+                                        )
+                                      ]
+                                    )
+                                  ])
+                                ],
+                                2
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "fb-order__footer" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "fb-cbtn fb-cbtn--po",
+                                    on: { click: _vm.doPlaceOrder }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n\t\t\t\t\t\t\tPlace Order\n\t\t\t\t\t\t"
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "fb-cbtn fb-cbtn--cancel",
+                                    on: { click: _vm.doClearCart }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n\t\t\t\t\t\t\tReset Cart\n\t\t\t\t\t\t"
+                                    )
+                                  ]
+                                )
+                              ])
+                            ])
+                          : _c("div", [
+                              _vm._v(
+                                "\n\t\t\t\t\tYour cart is Empty. Please choose items to order.\n\t\t\t\t"
                               )
                             ])
-                          ],
-                          2
-                        ),
-                        _vm._v(" "),
-                        _vm._m(7)
-                      ])
-                    : _c("div", [
-                        _vm._v(
-                          "\n\t\t\t\t\tYour cart is Empty. Please choose items to order.\n\t\t\t\t"
-                        )
-                      ])
-                ]
-              )
-            ])
-          ])
-        ])
-      ])
+                      ]
+                    )
+                  ])
+                ])
+              ])
+            : _vm._e()
+        ],
+        1
+      )
     ])
   ])
 }
@@ -13892,7 +14215,7 @@ var staticRenderFns = [
         _c("img", {
           staticClass: "img-responsive",
           attrs: {
-            src: "/local-assets/app/modules/images/fb/fb-logo-white.png",
+            src: "/local-assets/app/modules/images/fb/fb-loogo.png",
             alt: ""
           }
         })
@@ -13968,20 +14291,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "fb-order__main" }, [
       _c("div", { staticClass: "fb-order__name" }, [
         _vm._v("\n\t\t\t\t\t\t\t\t\tTotal\n\t\t\t\t\t\t\t\t")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "fb-order__footer" }, [
-      _c("div", { staticClass: "fb-cbtn fb-cbtn--po" }, [
-        _vm._v("\n\t\t\t\t\t\t\tPlace Order\n\t\t\t\t\t\t")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "fb-cbtn fb-cbtn--cancel" }, [
-        _vm._v("\n\t\t\t\t\t\t\tReset Cart\n\t\t\t\t\t\t")
       ])
     ])
   }
@@ -14084,7 +14393,7 @@ exports = module.exports = __webpack_require__(5)(true);
 
 
 // module
-exports.push([module.i, "\n.cn-wrapper__header,\n  .cn-wrapper__footer{\n      display: none;\n}\t\n", "", {"version":3,"sources":["/Users/cb-karthikeyan/food/eebdoof/src/components/HotelPage.vue?01b1094a"],"names":[],"mappings":";AA4VA;;MAEA,cAAA;CACA","file":"HotelPage.vue","sourcesContent":["<template>\n    <div>\n        <div class=\"fbs\">\n            <!-- =======================================================================\n            Start: FB \n            ======================================================================== -->\n            <div class=\"fb-container\">\n                <!-- =======================================================================\n                Start: Main Header \n                ======================================================================== -->\n                <div class=\"fb-header\">\n                    <div class=\"fb-header__container\">\n                        <div class=\"fb-header__main\">\n                            <div class=\"fb-header__logo\">\n                                <img src=\"/local-assets/app/modules/images/fb/fb-logo-white.png\" alt=\"\" class=\"img-responsive\">\n                            </div>\n                        </div>\n                        <div class=\"fb-header__actions\">\n                            <div class=\"fb-header__action\">\n                                <div class=\"fb-notify\">\n                                    <div class=\"icon cn-glyph-bell\"></div>\n                                </div>\n                            </div>\n                            <div class=\"fb-header__action fb-track\">\n                                My Orders\n                            </div>\n                            <div class=\"fb-header__action\">\n                                <div class=\"fb-acc\">\n                                    <div class=\"fb-acc__figure\">\n                                        <img src=\"/local-assets/app/modules/images/fb/avt.jpg\" alt=\"\" class=\"img-responsive\">\n                                    </div>\n                                    <div class=\"fb-acc__content\">\n                                        <div class=\"fb-acc__user\">\n                                            {{userName || 'User'}}\n                                            <div class=\"icon cn-glyph-menu-down\"></div>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <div class=\"fb-main\">\n\t\t\t<div class=\"fb-main__container\">\n\t\t\t<!-- ===================================================================\n\t\t\tStart: Main Menu Content \n\t\t\t==================================================================== -->\n\t\t\t<div class=\"fb-main__content\">\n\t\t\t\t<div class=\"fb-db\">\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Header\n\t\t\t\t\t============================================================= -->\n\t\t\t\t\t<div class=\"fb-dp__header\">\n\t\t\t\t\t\t<div class=\"fb-dp__search\">\n\t\t\t\t\t\t\t<span class=\"icon cn-glyph-search\"></span>\n\t\t\t\t\t\t\t<span style=\"margin-left: 6px;\">Search...</span>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<!-- <div class=\"fb-dp__actions\">\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t</div> -->\n\t\t\t\t\t</div>\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Header\n\t\t\t\t\t============================================================ -->\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Content\n\t\t\t\t\t============================================================ -->\n\t\t\t\t\t<div class=\"fb-dp__content\">\n\t\t\t\t\t\t<div class=\"fb-dp__title\"></div>\n\t\t\t\t\t\t<!-- =======================================================\n\t\t\t\t\t\tStart: Content Table\n\t\t\t\t\t\t======================================================== -->\n\t\t\t\t\t\t<div class=\"fb-table\">\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tStart: Header Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t<div class=\"fb-table__header\">\n\t\t\t\t\t\t\t\t<div class=\"fb-table__row\">\n\t\t\t\t\t\t\t\t\t<div class=\"fb-table__col\">\n\t\t\t\t\t\t\t\t\t\tRestaurants\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tEnd: Header Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tStart: Content Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t<div class=\"fb-table__content\">\n                                    <div class=\"fb-rest active\" v-for=\"(hotel, index) in hotels\" v-bind:key=\"index\">\n                                        <!-- ===========================================\n                                        Start: Menu\n                                        ============================================ -->\n                                        <div class=\"fb-rest__header\">\n                                            <div class=\"fb-rest__row\">\n                                                <!-- ===================================\n                                                Start: Rest\n                                                ==================================== -->\n                                                <div class=\"fb-rest__col\">\n                                                    <div class=\"fb-htl\">\n                                                        <div class=\"fb-htl__figure\" style=\"background-image: url('/local-assets/app/modules/images/fb/1.jpg\">\n                                                        </div>\n                                                        <div class=\"fb-htl__name\">\n                                                            {{hotel.name}}\n                                                        </div>\n                                                    </div>\n                                                </div>\n                                                <!-- ===================================\n                                                End: Rest\n                                                ==================================== -->\n                                                <!-- ===================================\n                                                Start: Rating\n                                                ==================================== -->\n                                                    <div class=\"fb-rest__col\">\n                                                        <div class=\"fb-rest__actions\">\n                                                            <div class=\"fb-rest__action fb-btn\" @click=\"showCreateItemModalBox = true\">Add Item</div>\n                                                            <div class=\"fb-rest__action\">\n                                                                \n                                                            </div>\n                                                        </div>\n                                                    </div>\n                                                <!-- ===================================\n                                                End: Rating\n                                                ==================================== -->\n                                            </div>\n                                        </div>\n                                        <!-- ===========================================\n                                        End: Menu\n                                        ============================================ -->\n                                        <!-- ===========================================\n                                        Start: Menu Content\n                                        ============================================ -->\n                                        <div class=\"fb-rest__content\">\n                                            <div class=\"fb-item\">\n                                                <div class=\"fb-item__row\">\n                                                    <!-- ===========================================\n                                                    Start: Menu col\n                                                    ============================================ -->\n                                                    <div class=\"fb-item__col\" v-for=\"(item, index) in hotel.items\" v-bind:key=\"index\">\n                                                        <!-- ===========================================\n                                                        Start: Menu Items\n                                                        ============================================ -->\n                                                        <div class=\"fb-menu-item\">\n                                                            <div class=\"fb-menu__figure\">\n                                                                <img src=\"/local-assets/app/modules/images/fb/13.png\" alt=\"\" class=\"img-responsive\">\n\n                                                                <div v-if=\"item.type == 'veg'\" class=\"fb-menu--veg\"></div>\n                                                                <div v-else class=\"fb-menu--nveg\"></div>\n                                                            </div>\n                                                            <div class=\"fb-menu__content\">\n                                                                <div class=\"fb-menu__text\">\n                                                                    <span>{{item.name}}</span>\n                                                                </div>\n                                                                <div class=\"fb-menu__price\">\n                                                                    Rs. {{item.price}}\n                                                                </div>\n                                                            </div>\n\n                                                            <!-- ===========================================\n                                                                Menu Action\n                                                            ============================================ -->\n                                                            <div class=\"fb-menu__actions\">\n                                                                <div class=\"fb-menu__action fb-icon fb-edit\" @click=\"showEditItemModal(item)\" >\n                                                                    <div class=\"icon cn-glyph-pencil\"></div>\n                                                                </div>\n                                                                <div class=\"fb-menu__action fb-icon fb-delete\" @click=\"showDeleteItemModal(item)\">\n                                                                    <div class=\"icon cn-glyph-delete\"></div>\n                                                                </div>\n                                                            </div>\n                                                        </div>\n                                                        <!-- ===========================================\n                                                        End: Menu Items\n                                                        ============================================ -->\n                                                    </div>\n                                                    <!-- ===========================================\n                                                    End: Menu col\n                                                    ============================================ -->\n                                                </div>\n                                            </div>\n                                        </div>\n                                        <!-- ===========================================\n                                        End: Menu Content\n                                        ============================================ -->\n                                    </div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tEnd: Content Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<!-- =======================================================\n\t\t\t\t\t\tEnd: Content Table\n\t\t\t\t\t\t======================================================== -->\n\t\t\t\t\t</div>\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tEnd: Content\n\t\t\t\t\t============================================================ -->\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<!-- ===================================================================\n\t\t\tEnd: Main Menu Content \n\t\t\t==================================================================== -->\n            <!-- =======================================================================\n\t\tStart: Main Cart \n\t\t======================================================================== -->\n\t\t<div class=\"fb-cart\" style=\"display:none\">\n\t\t\t<div class=\"fb-cart__icon\" @click=\"showCart = !showCart\">\n\t\t\t\t<div class=\"fb-cart__number\">3</div>\n\t\t\t\t<div>\n\t\t\t\t\t<img src=\"/local-assets/app/modules/images/fb/cart.png\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"fb-order\" :class=\"{'fb-order--active':showCart}\">\n\t\t\t\t<div class=\"fb-order__header\">\n\t\t\t\t\tYour Order\n\t\t\t\t</div>\n\t\t\t\t<div class=\"fb-order__content\">\n\t\t\t\t\t<!-- =======================================================================\n\t\t\t\t\tStart: item\n\t\t\t\t\t======================================================================== -->\n\t\t\t\t\t<div class=\"fb-order__item\">\n\t\t\t\t\t\t<div class=\"fb-order__main\">\n\t\t\t\t\t\t\t<div class=\"fb-order__name\">\n\t\t\t\t\t\t\t\tChicken Biryani Combo\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"fb-quantity\">\n\t\t\t\t\t\t\t\t<div class=\"fb-quantity__select\">\n\t\t\t\t\t\t\t\t\t<select>\n\t\t\t\t\t\t\t\t\t\t<option>0</option>\n\t\t\t\t\t\t\t\t\t\t<option>1</option>\n\t\t\t\t\t\t\t\t\t\t<option>2</option>\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t\t&times;\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"fb-quantity__amount\">\n\t\t\t\t\t\t\t\t\t$99.00\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"fb-order__aside\">\n\t\t\t\t\t\t\t$99.00\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"fb-order__item\">\n\t\t\t\t\t\t<div class=\"fb-order__main\">\n\t\t\t\t\t\t\t<div class=\"fb-order__name\">\n\t\t\t\t\t\t\t\tTotal\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"fb-order__aside\" style=\"color: #000; font-size: 16px; \">\n\t\t\t\t\t\t\t$99.00\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<!-- =======================================================================\n\t\t\t\t\tEnd: Item\n\t\t\t\t\t======================================================================== -->\n\t\t\t\t</div>\n\t\t\t\t<div class=\"fb-order__footer\">\n\t\t\t\t\t<div class=\"fb-cbtn fb-cbtn--po\">\n\t\t\t\t\t\tPlace Order\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"fb-cbtn fb-cbtn--cancel\">\n\t\t\t\t\t\tReset Cart\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- =======================================================================\n\t\tEnd: Main Cart \n\t\t======================================================================== -->\n\t\t\t</div>\n\t\t</div>\n            </div>\n            <!-- =======================================================================\n            End: FB \n            ======================================================================== -->\n        </div>\n        <create-item :item=\"currentItem\" v-if=\"showCreateItemModalBox\" @closeCreateItemModalDialog= \"closeCreateItemModalDialog()\"/>\n    </div>\n</template>\n<script lang=\"ts\">\n\nimport Vue from 'vue';\nimport Vuex from \"vuex\";\nimport Component from 'vue-class-component';\nimport CreateItemModal from \"@/components/CreateItemModal.vue\";\nimport {Hotel, Item } from 'store/types/common';\nimport * as app from \"@/store/app\";\n\n\n@Component({\n        props: {\n        },\n        components: {\n            // 'cb-placeholder': Placeholder,\n            'create-item':CreateItemModal\n        },\n        name: 'food-bee-hotel'\n    })\nexport default class HotelPage extends Vue {\n    showCreateItemModalBox: boolean = false;\n    showDeleteItemModalBox: boolean = false;\n    currentItem: Item;\n    showCart: boolean = false;\n    data(){\n        return{\n            currentItem:{}\n        }\n    }\n    closeCreateItemModalDialog(){\n        delete this.currentItem;\n        this.showCreateItemModalBox = false;\n    }\n\n    closeDeleteItemModal(){\n        delete this.currentItem;\n        this.showDeleteItemModalBox = false;\n    }\n\n    showEditItemModal(item: Item){\n        this.currentItem = item;\n        this.showCreateItemModalBox = true;\n    }\n\n    showDeleteItemModal(item: Item){\n        this.currentItem = item;\n        this.showDeleteItemModalBox = true;\n    }\n    get userName():string{\n        return app.getUser(this.$store).name;\n    }\n\n    get hotels(): Array<Hotel>{\n        return app.getHotels(this.$store);\n    }\n\n    created(){\n        app.getHotelUserConf(this.$store).then(data=>{\n        }); \n    }\n}\n</script>\n\n<style>\n  .cn-wrapper__header,\n    .cn-wrapper__footer{\n        display: none;\n    }\t\n</style>\n\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n.cn-wrapper__header,\n  .cn-wrapper__footer{\n      display: none;\n}\t\n", "", {"version":3,"sources":["/Users/cb-karthikeyan/food/eebdoof/src/components/HotelPage.vue?428c5509"],"names":[],"mappings":";AAiVA;;MAEA,cAAA;CACA","file":"HotelPage.vue","sourcesContent":["<template>\n    <div>\n        <div class=\"fbs\">\n            <!-- =======================================================================\n            Start: FB \n            ======================================================================== -->\n            <div class=\"fb-container\">\n                <!-- =======================================================================\n                Start: Main Header \n                ======================================================================== -->\n                <div class=\"fb-header\">\n                    <div class=\"fb-header__container\">\n                        <div class=\"fb-header__main\">\n                            <div class=\"fb-header__logo\">\n                                <img src=\"/local-assets/app/modules/images/fb/fb-loogo.png\" alt=\"\" class=\"img-responsive\">\n                            </div>\n                        </div>\n                        <div class=\"fb-header__actions\">\n                            <div class=\"fb-header__action\">\n                                <div class=\"fb-notify\">\n                                    <div class=\"icon cn-glyph-bell\"></div>\n                                </div>\n                            </div>\n                            <div class=\"fb-header__action fb-track\" @click=\"showDelivery = !showDelivery\">\n                                {{showDelivery?'See Menu':'See Orders'}}\n                            </div>\n                            <div class=\"fb-header__action\">\n                                <div class=\"fb-acc\">\n                                    <div class=\"fb-acc__figure\">\n                                        <img src=\"/local-assets/app/modules/images/fb/avt.jpg\" alt=\"\" class=\"img-responsive\">\n                                    </div>\n                                    <div class=\"fb-acc__content\">\n                                        <div class=\"fb-acc__user\">\n                                            {{userName || 'User'}}\n                                            <div class=\"icon cn-glyph-menu-down\"></div>\n                                        </div>\n                                    </div>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n                <order-delivery v-if=\"showDelivery\"/>\n                <div class=\"fb-main\" v-if=\"!showDelivery\">\n\t\t\t<div class=\"fb-main__container\">\n\t\t\t<!-- ===================================================================\n\t\t\tStart: Main Menu Content \n\t\t\t==================================================================== -->\n\t\t\t<div class=\"fb-main__content\">\n\t\t\t\t<div class=\"fb-db\">\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Header\n\t\t\t\t\t============================================================= -->\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Header\n\t\t\t\t\t============================================================ -->\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tStart: Content\n\t\t\t\t\t============================================================ -->\n\t\t\t\t\t<div class=\"fb-dp__content\">\n\t\t\t\t\t\t<div class=\"fb-dp__title\"></div>\n\t\t\t\t\t\t<!-- =======================================================\n\t\t\t\t\t\tStart: Content Table\n\t\t\t\t\t\t======================================================== -->\n\t\t\t\t\t\t<div class=\"fb-table\">\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tStart: Header Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tEnd: Header Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tStart: Content Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t\t<div class=\"fb-table__content\">\n                                    <div class=\"fb-rest active\" style=\"transform: scale(1); box-shadow: 0 1px 2px 0 rgba(0, 0, 20, 0.08), 0 2px 4px 0 rgba(0, 0, 20, 0.08)\" v-for=\"(hotel, index) in hotels\" v-bind:key=\"index\">\n                                        <!-- ===========================================\n                                        Start: Menu\n                                        ============================================ -->\n                                        <div class=\"fb-rest__header\">\n                                            <div class=\"fb-rest__row\">\n                                                <!-- ===================================\n                                                Start: Rest\n                                                ==================================== -->\n                                                <div class=\"fb-rest__col\">\n                                                    <div class=\"fb-htl\">\n                                                        <div class=\"fb-htl__figure\" style=\"background-image: url('/local-assets/app/modules/images/fb/1.jpg\">\n                                                        </div>\n                                                        <div class=\"fb-htl__name\">\n                                                            {{hotel.name}}'s Menu\n                                                        </div>\n                                                    </div>\n                                                </div>\n                                                <!-- ===================================\n                                                End: Rest\n                                                ==================================== -->\n                                                <!-- ===================================\n                                                Start: Rating\n                                                ==================================== -->\n                                                    <div class=\"fb-rest__col\">\n                                                        <div class=\"fb-rest__actions\">\n                                                            <div class=\"fb-rest__action fb-btn\" @click=\"showCreateItemModalBox = true\">Add Item</div>\n                                                            <div class=\"fb-rest__action\">\n                                                                \n                                                            </div>\n                                                        </div>\n                                                    </div>\n                                                <!-- ===================================\n                                                End: Rating\n                                                ==================================== -->\n                                            </div>\n                                        </div>\n                                        <!-- ===========================================\n                                        End: Menu\n                                        ============================================ -->\n                                        <!-- ===========================================\n                                        Start: Menu Content\n                                        ============================================ -->\n                                        <div class=\"fb-rest__content\">\n                                            <div class=\"fb-item\">\n                                                <div class=\"fb-item__row\">\n                                                    <!-- ===========================================\n                                                    Start: Menu col\n                                                    ============================================ -->\n                                                    <div class=\"fb-item__col\" v-for=\"(item, index) in hotel.items\" v-bind:key=\"index\">\n                                                        <!-- ===========================================\n                                                        Start: Menu Items\n                                                        ============================================ -->\n                                                        <div class=\"fb-menu-item\">\n                                                            <div class=\"fb-menu__figure\">\n                                                                <img src=\"/local-assets/app/modules/images/fb/13.png\" alt=\"\" class=\"img-responsive\">\n\n                                                                <div v-if=\"item.type == 'veg'\" class=\"fb-menu--veg\"></div>\n                                                                <div v-else class=\"fb-menu--nveg\"></div>\n                                                            </div>\n                                                            <div class=\"fb-menu__content\">\n                                                                <div class=\"fb-menu__text\">\n                                                                    <span>{{item.name}}</span>\n                                                                </div>\n                                                                <div class=\"fb-menu__price\">\n                                                                    Rs. {{item.price}}\n                                                                </div>\n                                                            </div>\n\n                                                            <!-- ===========================================\n                                                                Menu Action\n                                                            ============================================ -->\n                                                            <div class=\"fb-menu__actions\">\n                                                                <div class=\"fb-menu__action fb-icon fb-edit\" @click=\"showEditItemModal(item)\" >\n                                                                    <div class=\"icon cn-glyph-pencil\"></div>\n                                                                </div>\n                                                                <div class=\"fb-menu__action fb-icon fb-delete\" @click=\"showDeleteItemModal(item)\">\n                                                                    <div class=\"icon cn-glyph-delete\"></div>\n                                                                </div>\n                                                            </div>\n                                                        </div>\n                                                        <!-- ===========================================\n                                                        End: Menu Items\n                                                        ============================================ -->\n                                                    </div>\n                                                    <!-- ===========================================\n                                                    End: Menu col\n                                                    ============================================ -->\n                                                </div>\n                                            </div>\n                                        </div>\n                                        <!-- ===========================================\n                                        End: Menu Content\n                                        ============================================ -->\n                                    </div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<!-- ===================================================\n\t\t\t\t\t\t\tEnd: Content Table\n\t\t\t\t\t\t\t==================================================== -->\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<!-- =======================================================\n\t\t\t\t\t\tEnd: Content Table\n\t\t\t\t\t\t======================================================== -->\n\t\t\t\t\t</div>\n\t\t\t\t\t<!-- ===========================================================\n\t\t\t\t\tEnd: Content\n\t\t\t\t\t============================================================ -->\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t\t<!-- ===================================================================\n\t\t\tEnd: Main Menu Content \n\t\t\t==================================================================== -->\n            <!-- =======================================================================\n\t\tStart: Main Cart \n\t\t======================================================================== -->\n\t\t<div class=\"fb-cart\" style=\"display:none\">\n\t\t\t<div class=\"fb-cart__icon\" @click=\"showCart = !showCart\">\n\t\t\t\t<div class=\"fb-cart__number\">3</div>\n\t\t\t\t<div>\n\t\t\t\t\t<img src=\"/local-assets/app/modules/images/fb/cart.png\" alt=\"\" class=\"img-responsive\">\n\t\t\t\t</div>\n\t\t\t</div>\n\n\t\t\t<div class=\"fb-order\" :class=\"{'fb-order--active':showCart}\">\n\t\t\t\t<div class=\"fb-order__header\">\n\t\t\t\t\tYour Order\n\t\t\t\t</div>\n\t\t\t\t<div class=\"fb-order__content\">\n\t\t\t\t\t<!-- =======================================================================\n\t\t\t\t\tStart: item\n\t\t\t\t\t======================================================================== -->\n\t\t\t\t\t<div class=\"fb-order__item\">\n\t\t\t\t\t\t<div class=\"fb-order__main\">\n\t\t\t\t\t\t\t<div class=\"fb-order__name\">\n\t\t\t\t\t\t\t\tChicken Biryani Combo\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class=\"fb-quantity\">\n\t\t\t\t\t\t\t\t<div class=\"fb-quantity__select\">\n\t\t\t\t\t\t\t\t\t<select>\n\t\t\t\t\t\t\t\t\t\t<option>0</option>\n\t\t\t\t\t\t\t\t\t\t<option>1</option>\n\t\t\t\t\t\t\t\t\t\t<option>2</option>\n\t\t\t\t\t\t\t\t\t</select>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div>\n\t\t\t\t\t\t\t\t\t&times;\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t<div class=\"fb-quantity__amount\">\n\t\t\t\t\t\t\t\t\t$99.00\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"fb-order__aside\">\n\t\t\t\t\t\t\t$99.00\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class=\"fb-order__item\">\n\t\t\t\t\t\t<div class=\"fb-order__main\">\n\t\t\t\t\t\t\t<div class=\"fb-order__name\">\n\t\t\t\t\t\t\t\tTotal\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class=\"fb-order__aside\" style=\"color: #000; font-size: 16px; \">\n\t\t\t\t\t\t\t$99.00\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<!-- =======================================================================\n\t\t\t\t\tEnd: Item\n\t\t\t\t\t======================================================================== -->\n\t\t\t\t</div>\n\t\t\t\t<div class=\"fb-order__footer\">\n\t\t\t\t\t<div class=\"fb-cbtn fb-cbtn--po\">\n\t\t\t\t\t\tPlace Order\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"fb-cbtn fb-cbtn--cancel\">\n\t\t\t\t\t\tReset Cart\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<!-- =======================================================================\n\t\tEnd: Main Cart \n\t\t======================================================================== -->\n\t\t\t</div>\n\t\t</div>\n            </div>\n            <!-- =======================================================================\n            End: FB \n            ======================================================================== -->\n        </div>\n        <create-item :item=\"currentItem\" v-if=\"showCreateItemModalBox\" @closeCreateItemModalDialog= \"closeCreateItemModalDialog()\"/>\n    </div>\n</template>\n<script lang=\"ts\">\n\nimport Vue from 'vue';\nimport Vuex from \"vuex\";\nimport Component from 'vue-class-component';\nimport CreateItemModal from \"@/components/CreateItemModal.vue\";\nimport OrderDelivery from \"@/components/OrderDelivery.vue\";\nimport {Hotel, Item } from 'store/types/common';\nimport * as app from \"@/store/app\";\n\n\n@Component({\n        props: {\n        },\n        components: {\n            // 'cb-placeholder': Placeholder,\n            'create-item':CreateItemModal,\n            'order-delivery':OrderDelivery\n        },\n        name: 'food-bee-hotel'\n    })\nexport default class HotelPage extends Vue {\n    showCreateItemModalBox: boolean = false;\n    showDeleteItemModalBox: boolean = false;\n    currentItem: Item;\n    showCart: boolean = false;\n    showDelivery:boolean = false;\n    data(){\n        return{\n            currentItem:{}\n        }\n    }\n    closeCreateItemModalDialog(){\n        delete this.currentItem;\n        this.showCreateItemModalBox = false;\n    }\n\n    closeDeleteItemModal(){\n        delete this.currentItem;\n        this.showDeleteItemModalBox = false;\n    }\n\n    showEditItemModal(item: Item){\n        this.currentItem = item;\n        this.showCreateItemModalBox = true;\n    }\n\n    showDeleteItemModal(item: Item){\n        this.currentItem = item;\n        this.showDeleteItemModalBox = true;\n    }\n    get userName():string{\n        return app.getUser(this.$store).name;\n    }\n\n    get hotels(): Array<Hotel>{\n        return app.getHotels(this.$store);\n    }\n\n    created(){\n        app.getHotelUserConf(this.$store).then(data=>{\n        }); \n    }\n}\n</script>\n\n<style>\n  .cn-wrapper__header,\n    .cn-wrapper__footer{\n        display: none;\n    }\t\n</style>\n\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -14098,7 +14407,8 @@ exports.push([module.i, "\n.cn-wrapper__header,\n  .cn-wrapper__footer{\n      d
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_class_component__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_class_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_class_component__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_CreateItemModal_vue__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__store_app__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_OrderDelivery_vue__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__store_app__ = __webpack_require__(4);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -14121,6 +14431,7 @@ var __decorate = this && this.__decorate || function (decorators, target, key, d
 
 
 
+
 var HotelPage = function (_Vue) {
     _inherits(HotelPage, _Vue);
 
@@ -14132,6 +14443,7 @@ var HotelPage = function (_Vue) {
         _this.showCreateItemModalBox = false;
         _this.showDeleteItemModalBox = false;
         _this.showCart = false;
+        _this.showDelivery = false;
         return _this;
     }
 
@@ -14169,17 +14481,17 @@ var HotelPage = function (_Vue) {
     }, {
         key: "created",
         value: function created() {
-            __WEBPACK_IMPORTED_MODULE_3__store_app__["f" /* getHotelUserConf */](this.$store).then(function (data) {});
+            __WEBPACK_IMPORTED_MODULE_4__store_app__["f" /* getHotelUserConf */](this.$store).then(function (data) {});
         }
     }, {
         key: "userName",
         get: function get() {
-            return __WEBPACK_IMPORTED_MODULE_3__store_app__["h" /* getUser */](this.$store).name;
+            return __WEBPACK_IMPORTED_MODULE_4__store_app__["h" /* getUser */](this.$store).name;
         }
     }, {
         key: "hotels",
         get: function get() {
-            return __WEBPACK_IMPORTED_MODULE_3__store_app__["g" /* getHotels */](this.$store);
+            return __WEBPACK_IMPORTED_MODULE_4__store_app__["g" /* getHotels */](this.$store);
         }
     }]);
 
@@ -14189,7 +14501,8 @@ HotelPage = __decorate([__WEBPACK_IMPORTED_MODULE_1_vue_class_component___defaul
     props: {},
     components: {
         // 'cb-placeholder': Placeholder,
-        'create-item': __WEBPACK_IMPORTED_MODULE_2__components_CreateItemModal_vue__["a" /* default */]
+        'create-item': __WEBPACK_IMPORTED_MODULE_2__components_CreateItemModal_vue__["a" /* default */],
+        'order-delivery': __WEBPACK_IMPORTED_MODULE_3__components_OrderDelivery_vue__["a" /* default */]
     },
     name: 'food-bee-hotel'
 })], HotelPage);
@@ -14208,313 +14521,387 @@ var render = function() {
     "div",
     [
       _c("div", { staticClass: "fbs" }, [
-        _c("div", { staticClass: "fb-container" }, [
-          _c("div", { staticClass: "fb-header" }, [
-            _c("div", { staticClass: "fb-header__container" }, [
-              _vm._m(0),
-              _vm._v(" "),
-              _c("div", { staticClass: "fb-header__actions" }, [
-                _vm._m(1),
+        _c(
+          "div",
+          { staticClass: "fb-container" },
+          [
+            _c("div", { staticClass: "fb-header" }, [
+              _c("div", { staticClass: "fb-header__container" }, [
+                _vm._m(0),
                 _vm._v(" "),
-                _c("div", { staticClass: "fb-header__action fb-track" }, [
-                  _vm._v(
-                    "\n                                My Orders\n                            "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "fb-header__action" }, [
-                  _c("div", { staticClass: "fb-acc" }, [
-                    _vm._m(2),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "fb-acc__content" }, [
-                      _c("div", { staticClass: "fb-acc__user" }, [
-                        _vm._v(
-                          "\n                                            " +
-                            _vm._s(_vm.userName || "User") +
-                            "\n                                            "
-                        ),
-                        _c("div", { staticClass: "icon cn-glyph-menu-down" })
+                _c("div", { staticClass: "fb-header__actions" }, [
+                  _vm._m(1),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass: "fb-header__action fb-track",
+                      on: {
+                        click: function($event) {
+                          _vm.showDelivery = !_vm.showDelivery
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(_vm.showDelivery ? "See Menu" : "See Orders") +
+                          "\n                            "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "fb-header__action" }, [
+                    _c("div", { staticClass: "fb-acc" }, [
+                      _vm._m(2),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "fb-acc__content" }, [
+                        _c("div", { staticClass: "fb-acc__user" }, [
+                          _vm._v(
+                            "\n                                            " +
+                              _vm._s(_vm.userName || "User") +
+                              "\n                                            "
+                          ),
+                          _c("div", { staticClass: "icon cn-glyph-menu-down" })
+                        ])
                       ])
                     ])
                   ])
                 ])
               ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "fb-main" }, [
-            _c("div", { staticClass: "fb-main__container" }, [
-              _c("div", { staticClass: "fb-main__content" }, [
-                _c("div", { staticClass: "fb-db" }, [
-                  _vm._m(3),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "fb-dp__content" }, [
-                    _c("div", { staticClass: "fb-dp__title" }),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "fb-table" }, [
-                      _vm._m(4),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "fb-table__content" },
-                        _vm._l(_vm.hotels, function(hotel, index) {
-                          return _c(
-                            "div",
-                            { key: index, staticClass: "fb-rest active" },
-                            [
-                              _c("div", { staticClass: "fb-rest__header" }, [
-                                _c("div", { staticClass: "fb-rest__row" }, [
-                                  _c("div", { staticClass: "fb-rest__col" }, [
-                                    _c("div", { staticClass: "fb-htl" }, [
-                                      _c("div", {
-                                        staticClass: "fb-htl__figure",
-                                        staticStyle: {
-                                          "background-image":
-                                            "url('/local-assets/app/modules/images/fb/1.jpg"
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        { staticClass: "fb-htl__name" },
-                                        [
-                                          _vm._v(
-                                            "\n                                                            " +
-                                              _vm._s(hotel.name) +
-                                              "\n                                                        "
-                                          )
-                                        ]
-                                      )
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "fb-rest__col" }, [
+            ]),
+            _vm._v(" "),
+            _vm.showDelivery ? _c("order-delivery") : _vm._e(),
+            _vm._v(" "),
+            !_vm.showDelivery
+              ? _c("div", { staticClass: "fb-main" }, [
+                  _c("div", { staticClass: "fb-main__container" }, [
+                    _c("div", { staticClass: "fb-main__content" }, [
+                      _c("div", { staticClass: "fb-db" }, [
+                        _c("div", { staticClass: "fb-dp__content" }, [
+                          _c("div", { staticClass: "fb-dp__title" }),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table" }, [
+                            _c(
+                              "div",
+                              { staticClass: "fb-table__content" },
+                              _vm._l(_vm.hotels, function(hotel, index) {
+                                return _c(
+                                  "div",
+                                  {
+                                    key: index,
+                                    staticClass: "fb-rest active",
+                                    staticStyle: {
+                                      transform: "scale(1)",
+                                      "box-shadow":
+                                        "0 1px 2px 0 rgba(0, 0, 20, 0.08), 0 2px 4px 0 rgba(0, 0, 20, 0.08)"
+                                    }
+                                  },
+                                  [
                                     _c(
                                       "div",
-                                      { staticClass: "fb-rest__actions" },
+                                      { staticClass: "fb-rest__header" },
                                       [
                                         _c(
                                           "div",
-                                          {
-                                            staticClass:
-                                              "fb-rest__action fb-btn",
-                                            on: {
-                                              click: function($event) {
-                                                _vm.showCreateItemModalBox = true
-                                              }
-                                            }
-                                          },
-                                          [_vm._v("Add Item")]
-                                        ),
-                                        _vm._v(" "),
-                                        _c("div", {
-                                          staticClass: "fb-rest__action"
-                                        })
+                                          { staticClass: "fb-rest__row" },
+                                          [
+                                            _c(
+                                              "div",
+                                              { staticClass: "fb-rest__col" },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  { staticClass: "fb-htl" },
+                                                  [
+                                                    _c("div", {
+                                                      staticClass:
+                                                        "fb-htl__figure",
+                                                      staticStyle: {
+                                                        "background-image":
+                                                          "url('/local-assets/app/modules/images/fb/1.jpg"
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "fb-htl__name"
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "\n                                                            " +
+                                                            _vm._s(hotel.name) +
+                                                            "'s Menu\n                                                        "
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                )
+                                              ]
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "div",
+                                              { staticClass: "fb-rest__col" },
+                                              [
+                                                _c(
+                                                  "div",
+                                                  {
+                                                    staticClass:
+                                                      "fb-rest__actions"
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "div",
+                                                      {
+                                                        staticClass:
+                                                          "fb-rest__action fb-btn",
+                                                        on: {
+                                                          click: function(
+                                                            $event
+                                                          ) {
+                                                            _vm.showCreateItemModalBox = true
+                                                          }
+                                                        }
+                                                      },
+                                                      [_vm._v("Add Item")]
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c("div", {
+                                                      staticClass:
+                                                        "fb-rest__action"
+                                                    })
+                                                  ]
+                                                )
+                                              ]
+                                            )
+                                          ]
+                                        )
                                       ]
-                                    )
-                                  ])
-                                ])
-                              ]),
-                              _vm._v(" "),
-                              _c("div", { staticClass: "fb-rest__content" }, [
-                                _c("div", { staticClass: "fb-item" }, [
-                                  _c(
-                                    "div",
-                                    { staticClass: "fb-item__row" },
-                                    _vm._l(hotel.items, function(item, index) {
-                                      return _c(
-                                        "div",
-                                        {
-                                          key: index,
-                                          staticClass: "fb-item__col"
-                                        },
-                                        [
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "fb-rest__content" },
+                                      [
+                                        _c("div", { staticClass: "fb-item" }, [
                                           _c(
                                             "div",
-                                            { staticClass: "fb-menu-item" },
-                                            [
-                                              _c(
+                                            { staticClass: "fb-item__row" },
+                                            _vm._l(hotel.items, function(
+                                              item,
+                                              index
+                                            ) {
+                                              return _c(
                                                 "div",
                                                 {
-                                                  staticClass: "fb-menu__figure"
-                                                },
-                                                [
-                                                  _c("img", {
-                                                    staticClass:
-                                                      "img-responsive",
-                                                    attrs: {
-                                                      src:
-                                                        "/local-assets/app/modules/images/fb/13.png",
-                                                      alt: ""
-                                                    }
-                                                  }),
-                                                  _vm._v(" "),
-                                                  item.type == "veg"
-                                                    ? _c("div", {
-                                                        staticClass:
-                                                          "fb-menu--veg"
-                                                      })
-                                                    : _c("div", {
-                                                        staticClass:
-                                                          "fb-menu--nveg"
-                                                      })
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "fb-menu__content"
+                                                  key: index,
+                                                  staticClass: "fb-item__col"
                                                 },
                                                 [
                                                   _c(
                                                     "div",
                                                     {
                                                       staticClass:
-                                                        "fb-menu__text"
+                                                        "fb-menu-item"
                                                     },
                                                     [
-                                                      _c("span", [
-                                                        _vm._v(
-                                                          _vm._s(item.name)
-                                                        )
-                                                      ])
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "fb-menu__price"
-                                                    },
-                                                    [
-                                                      _vm._v(
-                                                        "\n                                                                    Rs. " +
-                                                          _vm._s(item.price) +
-                                                          "\n                                                                "
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "fb-menu__figure"
+                                                        },
+                                                        [
+                                                          _c("img", {
+                                                            staticClass:
+                                                              "img-responsive",
+                                                            attrs: {
+                                                              src:
+                                                                "/local-assets/app/modules/images/fb/13.png",
+                                                              alt: ""
+                                                            }
+                                                          }),
+                                                          _vm._v(" "),
+                                                          item.type == "veg"
+                                                            ? _c("div", {
+                                                                staticClass:
+                                                                  "fb-menu--veg"
+                                                              })
+                                                            : _c("div", {
+                                                                staticClass:
+                                                                  "fb-menu--nveg"
+                                                              })
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "fb-menu__content"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "fb-menu__text"
+                                                            },
+                                                            [
+                                                              _c("span", [
+                                                                _vm._v(
+                                                                  _vm._s(
+                                                                    item.name
+                                                                  )
+                                                                )
+                                                              ])
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "fb-menu__price"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "\n                                                                    Rs. " +
+                                                                  _vm._s(
+                                                                    item.price
+                                                                  ) +
+                                                                  "\n                                                                "
+                                                              )
+                                                            ]
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "fb-menu__actions"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "fb-menu__action fb-icon fb-edit",
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  _vm.showEditItemModal(
+                                                                    item
+                                                                  )
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("div", {
+                                                                staticClass:
+                                                                  "icon cn-glyph-pencil"
+                                                              })
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "fb-menu__action fb-icon fb-delete",
+                                                              on: {
+                                                                click: function(
+                                                                  $event
+                                                                ) {
+                                                                  _vm.showDeleteItemModal(
+                                                                    item
+                                                                  )
+                                                                }
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("div", {
+                                                                staticClass:
+                                                                  "icon cn-glyph-delete"
+                                                              })
+                                                            ]
+                                                          )
+                                                        ]
                                                       )
                                                     ]
                                                   )
                                                 ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "div",
-                                                {
-                                                  staticClass:
-                                                    "fb-menu__actions"
-                                                },
-                                                [
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "fb-menu__action fb-icon fb-edit",
-                                                      on: {
-                                                        click: function(
-                                                          $event
-                                                        ) {
-                                                          _vm.showEditItemModal(
-                                                            item
-                                                          )
-                                                        }
-                                                      }
-                                                    },
-                                                    [
-                                                      _c("div", {
-                                                        staticClass:
-                                                          "icon cn-glyph-pencil"
-                                                      })
-                                                    ]
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "div",
-                                                    {
-                                                      staticClass:
-                                                        "fb-menu__action fb-icon fb-delete",
-                                                      on: {
-                                                        click: function(
-                                                          $event
-                                                        ) {
-                                                          _vm.showDeleteItemModal(
-                                                            item
-                                                          )
-                                                        }
-                                                      }
-                                                    },
-                                                    [
-                                                      _c("div", {
-                                                        staticClass:
-                                                          "icon cn-glyph-delete"
-                                                      })
-                                                    ]
-                                                  )
-                                                ]
                                               )
-                                            ]
+                                            })
                                           )
-                                        ]
-                                      )
-                                    })
-                                  )
-                                ])
-                              ])
-                            ]
-                          )
-                        })
-                      )
-                    ])
+                                        ])
+                                      ]
+                                    )
+                                  ]
+                                )
+                              })
+                            )
+                          ])
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "fb-cart",
+                        staticStyle: { display: "none" }
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "fb-cart__icon",
+                            on: {
+                              click: function($event) {
+                                _vm.showCart = !_vm.showCart
+                              }
+                            }
+                          },
+                          [
+                            _c("div", { staticClass: "fb-cart__number" }, [
+                              _vm._v("3")
+                            ]),
+                            _vm._v(" "),
+                            _vm._m(3)
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass: "fb-order",
+                            class: { "fb-order--active": _vm.showCart }
+                          },
+                          [
+                            _c("div", { staticClass: "fb-order__header" }, [
+                              _vm._v("\n\t\t\t\t\tYour Order\n\t\t\t\t")
+                            ]),
+                            _vm._v(" "),
+                            _vm._m(4),
+                            _vm._v(" "),
+                            _vm._m(5)
+                          ]
+                        )
+                      ]
+                    )
                   ])
                 ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "fb-cart", staticStyle: { display: "none" } },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "fb-cart__icon",
-                      on: {
-                        click: function($event) {
-                          _vm.showCart = !_vm.showCart
-                        }
-                      }
-                    },
-                    [
-                      _c("div", { staticClass: "fb-cart__number" }, [
-                        _vm._v("3")
-                      ]),
-                      _vm._v(" "),
-                      _vm._m(5)
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "fb-order",
-                      class: { "fb-order--active": _vm.showCart }
-                    },
-                    [
-                      _c("div", { staticClass: "fb-order__header" }, [
-                        _vm._v("\n\t\t\t\t\tYour Order\n\t\t\t\t")
-                      ]),
-                      _vm._v(" "),
-                      _vm._m(6),
-                      _vm._v(" "),
-                      _vm._m(7)
-                    ]
-                  )
-                ]
-              )
-            ])
-          ])
-        ])
+              : _vm._e()
+          ],
+          1
+        )
       ]),
       _vm._v(" "),
       _vm.showCreateItemModalBox
@@ -14541,7 +14928,7 @@ var staticRenderFns = [
         _c("img", {
           staticClass: "img-responsive",
           attrs: {
-            src: "/local-assets/app/modules/images/fb/fb-logo-white.png",
+            src: "/local-assets/app/modules/images/fb/fb-loogo.png",
             alt: ""
           }
         })
@@ -14567,32 +14954,6 @@ var staticRenderFns = [
         staticClass: "img-responsive",
         attrs: { src: "/local-assets/app/modules/images/fb/avt.jpg", alt: "" }
       })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "fb-dp__header" }, [
-      _c("div", { staticClass: "fb-dp__search" }, [
-        _c("span", { staticClass: "icon cn-glyph-search" }),
-        _vm._v(" "),
-        _c("span", { staticStyle: { "margin-left": "6px" } }, [
-          _vm._v("Search...")
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "fb-table__header" }, [
-      _c("div", { staticClass: "fb-table__row" }, [
-        _c("div", { staticClass: "fb-table__col" }, [
-          _vm._v("\n\t\t\t\t\t\t\t\t\t\tRestaurants\n\t\t\t\t\t\t\t\t\t")
-        ])
-      ])
     ])
   },
   function() {
@@ -15873,6 +16234,1794 @@ CbUtils.install = function (Vue, options) {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (CbUtils);
+
+/***/ }),
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_YourOrder_vue__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0801e1b4_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_YourOrder_vue__ = __webpack_require__(77);
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_YourOrder_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0801e1b4_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_YourOrder_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/components/YourOrder.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] YourOrder.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0801e1b4", Component.options)
+  } else {
+    hotAPI.reload("data-v-0801e1b4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+
+
+/***/ }),
+/* 76 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return YourOrder; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_class_component__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vue_class_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vue_class_component__);
+var _dec, _class;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+var YourOrder = (_dec = __WEBPACK_IMPORTED_MODULE_2_vue_class_component___default()({
+    props: {},
+    components: {
+        // 'cb-placeholder': Placeholder,
+        // 'create-item':CreateItemModal
+    },
+    name: 'your-order'
+}), _dec(_class = function (_Vue) {
+    _inherits(YourOrder, _Vue);
+
+    function YourOrder() {
+        _classCallCheck(this, YourOrder);
+
+        return _possibleConstructorReturn(this, (YourOrder.__proto__ || Object.getPrototypeOf(YourOrder)).apply(this, arguments));
+    }
+
+    return YourOrder;
+}(__WEBPACK_IMPORTED_MODULE_0_vue__["default"])) || _class);
+
+
+/***/ }),
+/* 77 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "fb-container" }, [
+      _c(
+        "div",
+        { staticClass: "fb-main", staticStyle: { "max-width": "960px" } },
+        [
+          _c("div", { staticClass: "fb-main__container" }, [
+            _c("div", { staticClass: "fb-main__content" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "fb-db",
+                  staticStyle: { "margin-bottom": "80px" }
+                },
+                [
+                  _c("div", { staticClass: "fb-dp__content" }, [
+                    _c("div", { staticClass: "fb-dp__title" }, [
+                      _vm._v("\n\t\t\t\t\t\t\tPending Order\n\t\t\t\t\t\t")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "fb-table" }, [
+                      _c("div", { staticClass: "fb-table__header" }, [
+                        _c("div", { staticClass: "fb-table__row" }, [
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\tRestaurants\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\tOrder ID\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\tAmount\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\tStatus\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\tAction\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "fb-table__content fb-table__content--user"
+                        },
+                        [
+                          _c("div", { staticClass: "fb-table__row" }, [
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _c("div", { staticClass: "fb-htl" }, [
+                                _c("div", {
+                                  staticClass: "fb-htl__figure",
+                                  staticStyle: {
+                                    "background-image":
+                                      "url('/local-assets/app/modules/images/fb/1.jpg')"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-htl__name" }, [
+                                  _vm._v(
+                                    "\n\t\t\t\t\t\t\t\t\t\t\t\tSavoury Sea Shell\n\t\t\t\t\t\t\t\t\t\t\t"
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t\t\t\t\tIM 12345\n\t\t\t\t\t\t\t\t\t"
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t\t\t\t\t$200.00\n\t\t\t\t\t\t\t\t\t"
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _c(
+                                "span",
+                                { staticClass: "fb-status fb-status--otw" },
+                                [_vm._v("Out for Delivery")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__row" }, [
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _c("div", { staticClass: "fb-htl" }, [
+                                _c("div", {
+                                  staticClass: "fb-htl__figure",
+                                  staticStyle: {
+                                    "background-image":
+                                      "url('/local-assets/app/modules/images/fb/1.jpg')"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-htl__name" }, [
+                                  _vm._v(
+                                    "\n\t\t\t\t\t\t\t\t\t\t\t\tSavoury Sea Shell\n\t\t\t\t\t\t\t\t\t\t\t"
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t\t\t\t\tIM 12345\n\t\t\t\t\t\t\t\t\t"
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t\t\t\t\t$550.00\n\t\t\t\t\t\t\t\t\t"
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _c(
+                                "span",
+                                { staticClass: "fb-status fb-status--inc" },
+                                [_vm._v("In Progress")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _c("div", { staticClass: "fb-table__cancel" }, [
+                                _vm._v("Cancel")
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__row" }, [
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _c("div", { staticClass: "fb-htl" }, [
+                                _c("div", {
+                                  staticClass: "fb-htl__figure",
+                                  staticStyle: {
+                                    "background-image":
+                                      "url('/local-assets/app/modules/images/fb/1.jpg')"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-htl__name" }, [
+                                  _vm._v(
+                                    "\n\t\t\t\t\t\t\t\t\t\t\t\tSavoury Sea Shell\n\t\t\t\t\t\t\t\t\t\t\t"
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t\t\t\t\tIM 12345\n\t\t\t\t\t\t\t\t\t"
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t\t\t\t\t$450.00\n\t\t\t\t\t\t\t\t\t"
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _c(
+                                "span",
+                                { staticClass: "fb-status fb-status--inc" },
+                                [_vm._v("In Progress")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-table__col" }, [
+                              _c("div", { staticClass: "fb-table__cancel" }, [
+                                _vm._v("Cancel")
+                              ])
+                            ])
+                          ])
+                        ]
+                      )
+                    ])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "fb-db" }, [
+                _c("div", { staticClass: "fb-dp__content" }, [
+                  _c("div", { staticClass: "fb-dp__title" }, [
+                    _vm._v("\n\t\t\t\t\t\t\tOrder History\n\t\t\t\t\t\t")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "fb-table" }, [
+                    _c("div", { staticClass: "fb-table__header" }, [
+                      _c("div", { staticClass: "fb-table__row" }, [
+                        _c("div", { staticClass: "fb-table__col" }, [
+                          _vm._v(
+                            "\n\t\t\t\t\t\t\t\t\t\tRestaurants\n\t\t\t\t\t\t\t\t\t"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "fb-table__col" }, [
+                          _vm._v(
+                            "\n\t\t\t\t\t\t\t\t\t\tOrder ID\n\t\t\t\t\t\t\t\t\t"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "fb-table__col" }, [
+                          _vm._v(
+                            "\n\t\t\t\t\t\t\t\t\t\tDate\n\t\t\t\t\t\t\t\t\t"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "fb-table__col" }, [
+                          _vm._v(
+                            "\n\t\t\t\t\t\t\t\t\t\tAmount\n\t\t\t\t\t\t\t\t\t"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "fb-table__col" }, [
+                          _vm._v(
+                            "\n\t\t\t\t\t\t\t\t\t\tStatus\n\t\t\t\t\t\t\t\t\t"
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "fb-table__col" }, [
+                          _vm._v(
+                            "\n\t\t\t\t\t\t\t\t\t\tAction\n\t\t\t\t\t\t\t\t\t"
+                          )
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "fb-table__content fb-table__content--user"
+                      },
+                      [
+                        _c("div", { staticClass: "fb-table__row" }, [
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _c("div", { staticClass: "fb-htl" }, [
+                              _c("div", {
+                                staticClass: "fb-htl__figure",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/local-assets/app/modules/images/fb/1.jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "fb-htl__name" }, [
+                                _vm._v(
+                                  "\n\t\t\t\t\t\t\t\t\t\t\t\tHot pot china\n\t\t\t\t\t\t\t\t\t\t\t"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\tIM 12345\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\t25-06-18\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\t$2310.00\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _c(
+                              "span",
+                              { staticClass: "fb-status fb-status--del" },
+                              [_vm._v("Delivered")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _c("div", { staticClass: "fb-table__re" }, [
+                              _vm._v("Re-order Now")
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "fb-table__row" }, [
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _c("div", { staticClass: "fb-htl" }, [
+                              _c("div", {
+                                staticClass: "fb-htl__figure",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/local-assets/app/modules/images/fb/1.jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "fb-htl__name" }, [
+                                _vm._v(
+                                  "\n\t\t\t\t\t\t\t\t\t\t\t\tSavoury Sea Shell\n\t\t\t\t\t\t\t\t\t\t\t"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\tIM 12345\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\t24-06-18\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\t$800.00\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _c(
+                              "span",
+                              { staticClass: "fb-status fb-status--del" },
+                              [_vm._v("Delivered")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _c("div", { staticClass: "fb-table__re" }, [
+                              _vm._v("Re-order Now")
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "fb-table__row" }, [
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _c("div", { staticClass: "fb-htl" }, [
+                              _c("div", {
+                                staticClass: "fb-htl__figure",
+                                staticStyle: {
+                                  "background-image":
+                                    "url('/local-assets/app/modules/images/fb/1.jpg')"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "fb-htl__name" }, [
+                                _vm._v(
+                                  "\n\t\t\t\t\t\t\t\t\t\t\t\tCheesy Juicy Burgers\n\t\t\t\t\t\t\t\t\t\t\t"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\tIM 12345\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\t23-06-18\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _vm._v(
+                              "\n\t\t\t\t\t\t\t\t\t\t$200.00\n\t\t\t\t\t\t\t\t\t"
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _c(
+                              "span",
+                              { staticClass: "fb-status fb-status--can" },
+                              [_vm._v("Cancelled")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-table__col" }, [
+                            _c("div", { staticClass: "fb-table__re" }, [
+                              _vm._v("Re-order Now")
+                            ])
+                          ])
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]
+      )
+    ])
+  }
+]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-0801e1b4", esExports)
+  }
+}
+
+/***/ }),
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_ts_loader_node_modules_vue_loader_lib_selector_type_script_index_0_OrderDelivery_vue__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_826326a6_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_OrderDelivery_vue__ = __webpack_require__(83);
+var disposed = false
+var normalizeComponent = __webpack_require__(2)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_ts_loader_node_modules_vue_loader_lib_selector_type_script_index_0_OrderDelivery_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_826326a6_hasScoped_false_node_modules_vue_loader_lib_selector_type_template_index_0_OrderDelivery_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/components/OrderDelivery.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] OrderDelivery.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-826326a6", Component.options)
+  } else {
+    hotAPI.reload("data-v-826326a6", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+
+
+/***/ }),
+/* 82 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_class_component__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_class_component___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vue_class_component__);
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var OrderDelivery = function (_Vue) {
+    _inherits(OrderDelivery, _Vue);
+
+    function OrderDelivery() {
+        _classCallCheck(this, OrderDelivery);
+
+        return _possibleConstructorReturn(this, (OrderDelivery.__proto__ || Object.getPrototypeOf(OrderDelivery)).apply(this, arguments));
+    }
+
+    return OrderDelivery;
+}(__WEBPACK_IMPORTED_MODULE_0_vue__["default"]);
+OrderDelivery = __decorate([__WEBPACK_IMPORTED_MODULE_1_vue_class_component___default()({
+    props: {},
+    components: {},
+    name: 'order-delivery'
+})], OrderDelivery);
+/* harmony default export */ __webpack_exports__["a"] = (OrderDelivery);
+
+/***/ }),
+/* 83 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "fb-main" }, [
+      _c("div", { staticClass: "fb-main__container" }, [
+        _c(
+          "div",
+          { staticClass: "fb-main__aside", staticStyle: { display: "none" } },
+          [
+            _c("div", { staticClass: "fb-filters" }, [
+              _c("div", { staticClass: "fb-filters__content" }, [
+                _c("div", { staticClass: "fb-filters__title" }, [
+                  _vm._v("\n\t\t\t\t\t\tFilters\n\t\t\t\t\t")
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "fb-filter" }, [
+                  _c("div", { staticClass: "fb-filter__header" }, [
+                    _vm._v("\n\t\t\t\t\t\t\tFood Type\n\t\t\t\t\t\t")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "fb-filter__content" }, [
+                    _c("div", { staticClass: "fb-filter__list" }, [
+                      _c("div", { staticClass: "fb-filter__item" }, [
+                        _c("div", { staticClass: "cs-checkbox" }, [
+                          _c("label", { staticClass: "cs-checkbox__label" }, [
+                            _c("input", {
+                              staticClass: "cs-checkbox__element",
+                              attrs: { type: "checkbox", value: "true" }
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "cs-checkbox__value" }, [
+                              _vm._v(
+                                "\n                                                Veg\n                                            "
+                              )
+                            ])
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "fb-filter__item" }, [
+                        _c("div", { staticClass: "cs-checkbox" }, [
+                          _c("label", { staticClass: "cs-checkbox__label" }, [
+                            _c("input", {
+                              staticClass: "cs-checkbox__element",
+                              attrs: { type: "checkbox", value: "true" }
+                            }),
+                            _vm._v(" "),
+                            _c("span", { staticClass: "cs-checkbox__value" }, [
+                              _vm._v(
+                                "\n                                                Non-Veg\n                                            "
+                              )
+                            ])
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "fb-filter__footer" })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "fb-filters__footer" })
+            ])
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "fb-main__content" }, [
+          _c("div", { staticClass: "fb-db" }, [
+            _c("div", { staticClass: "fb-dp__content" }, [
+              _c("div", { staticClass: "fb-dp__title" }, [_vm._v("Orders")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "fb-table" }, [
+                _c("div", { staticClass: "fb-table__header fb-del-order" }, [
+                  _c("div", { staticClass: "fb-table__row" }, [
+                    _c("div", { staticClass: "fb-table__col" }, [
+                      _vm._v("\n\t\t\t\t\t\t\t\t\tOrders\n\t\t\t\t\t\t\t\t")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "fb-table__col" }, [
+                      _vm._v("\n\t\t\t\t\t\t\t\t\tDuration\n\t\t\t\t\t\t\t\t")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "fb-table__col" }, [
+                      _vm._v("\n\t\t\t\t\t\t\t\t\tAmount\n\t\t\t\t\t\t\t\t")
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "fb-table__col" }, [
+                      _vm._v("\n\t\t\t\t\t\t\t\t\tStatus\n\t\t\t\t\t\t\t\t")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "fb-table__col",
+                        staticStyle: { color: "#fff", "max-width": "none" }
+                      },
+                      [_vm._v("\n\t\t\t\t\t\t\t\t\tAction\n\t\t\t\t\t\t\t\t")]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "fb-table__content fb-del-order" }, [
+                  _c(
+                    "div",
+                    { staticClass: "fb-rest", attrs: { "data-orders": "1" } },
+                    [
+                      _c("div", { staticClass: "fb-rest__header" }, [
+                        _c("div", { staticClass: "fb-rest__row" }, [
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _c("div", { staticClass: "fb-htl" }, [
+                              _c("div", { staticClass: "fb-htl__name" }, [
+                                _vm._v(
+                                  "\n\t\t\t\t\t\t\t\t\t\t\t\t\tOID12345\n\t\t\t\t\t\t\t\t\t\t\t\t"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("15mins ago")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("$25.00")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("Pending")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _c("div", {
+                              staticClass: "icon cn-glyph-chevron-right"
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "fb-rest__content" }, [
+                        _c("div", { staticClass: "fb-item" }, [
+                          _c("div", { staticClass: "fb-item__row" }, [
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/11.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--veg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu__price" }, [
+                                    _vm._v(
+                                      "\n\t\t                                    \t\t\t\t5\n\t\t                                    \t\t\t"
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__actions" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "fb-menu__action fb-icon fb-delete",
+                                      staticStyle: { "line-height": "45px" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n\t                                    \t\t\t\t\tReject\n\t                                    \t\t\t\t"
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/12.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--nveg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu__price" }, [
+                                    _vm._v(
+                                      "\n\t\t                                    \t\t\t\t1\n\t\t                                    \t\t\t"
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__actions" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "fb-menu__action fb-icon fb-delete",
+                                      staticStyle: { "line-height": "45px" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n\t                                    \t\t\t\t\tReject\n\t                                    \t\t\t\t"
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/13.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--veg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-placeorder" }, [
+                            _c(
+                              "div",
+                              { staticClass: "fb-placeorder__actions" },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "fb-placeorder__action" },
+                                  [
+                                    _vm._v(
+                                      "\n\t\t\t\t\t\t\t\t\t\t\t\t\tAccept Order\n\t\t\t\t\t\t\t\t\t\t\t\t"
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "fb-rest", attrs: { "data-orders": "2" } },
+                    [
+                      _c("div", { staticClass: "fb-rest__header" }, [
+                        _c("div", { staticClass: "fb-rest__row" }, [
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _c("div", { staticClass: "fb-htl" }, [
+                              _c("div", { staticClass: "fb-htl__name" }, [
+                                _vm._v(
+                                  "\n\t\t\t\t\t\t\t\t\t\t\t\t\tOID12345\n\t\t\t\t\t\t\t\t\t\t\t\t"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("15mins ago")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("$25.00")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("Pending")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _c("div", {
+                              staticClass: "icon cn-glyph-chevron-right"
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "fb-rest__content" }, [
+                        _c("div", { staticClass: "fb-item" }, [
+                          _c("div", { staticClass: "fb-item__row" }, [
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/11.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--veg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu__price" }, [
+                                    _vm._v(
+                                      "\n\t\t                                    \t\t\t\t5\n\t\t                                    \t\t\t"
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__actions" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "fb-menu__action fb-icon fb-delete",
+                                      staticStyle: { "line-height": "45px" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n\t                                    \t\t\t\t\tReject\n\t                                    \t\t\t\t"
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/12.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--nveg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu__price" }, [
+                                    _vm._v(
+                                      "\n\t\t                                    \t\t\t\t1\n\t\t                                    \t\t\t"
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__actions" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "fb-menu__action fb-icon fb-delete",
+                                      staticStyle: { "line-height": "45px" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n\t                                    \t\t\t\t\tReject\n\t                                    \t\t\t\t"
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/13.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--veg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-placeorder" }, [
+                            _c(
+                              "div",
+                              { staticClass: "fb-placeorder__actions" },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "fb-placeorder__action" },
+                                  [
+                                    _vm._v(
+                                      "\n\t\t\t\t\t\t\t\t\t\t\t\t\tAccept Order\n\t\t\t\t\t\t\t\t\t\t\t\t"
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "fb-rest", attrs: { "data-orders": "3" } },
+                    [
+                      _c("div", { staticClass: "fb-rest__header" }, [
+                        _c("div", { staticClass: "fb-rest__row" }, [
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _c("div", { staticClass: "fb-htl" }, [
+                              _c("div", { staticClass: "fb-htl__name" }, [
+                                _vm._v(
+                                  "\n\t\t\t\t\t\t\t\t\t\t\t\t\tOID12345\n\t\t\t\t\t\t\t\t\t\t\t\t"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("15mins ago")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("$25.00")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("Pending")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _c("div", {
+                              staticClass: "icon cn-glyph-chevron-right"
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "fb-rest__content" }, [
+                        _c("div", { staticClass: "fb-item" }, [
+                          _c("div", { staticClass: "fb-item__row" }, [
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/11.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--veg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu__price" }, [
+                                    _vm._v(
+                                      "\n\t\t                                    \t\t\t\t5\n\t\t                                    \t\t\t"
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__actions" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "fb-menu__action fb-icon fb-delete",
+                                      staticStyle: { "line-height": "45px" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n\t                                    \t\t\t\t\tReject\n\t                                    \t\t\t\t"
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/12.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--nveg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu__price" }, [
+                                    _vm._v(
+                                      "\n\t\t                                    \t\t\t\t1\n\t\t                                    \t\t\t"
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__actions" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "fb-menu__action fb-icon fb-delete",
+                                      staticStyle: { "line-height": "45px" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n\t                                    \t\t\t\t\tReject\n\t                                    \t\t\t\t"
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/13.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--veg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-placeorder" }, [
+                            _c(
+                              "div",
+                              { staticClass: "fb-placeorder__actions" },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "fb-placeorder__action" },
+                                  [
+                                    _vm._v(
+                                      "\n\t\t\t\t\t\t\t\t\t\t\t\t\tAccept Order\n\t\t\t\t\t\t\t\t\t\t\t\t"
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
+                        ])
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "fb-rest", attrs: { "data-orders": "4" } },
+                    [
+                      _c("div", { staticClass: "fb-rest__header" }, [
+                        _c("div", { staticClass: "fb-rest__row" }, [
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _c("div", { staticClass: "fb-htl" }, [
+                              _c("div", { staticClass: "fb-htl__name" }, [
+                                _vm._v(
+                                  "\n\t\t\t\t\t\t\t\t\t\t\t\t\tOID12345\n\t\t\t\t\t\t\t\t\t\t\t\t"
+                                )
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("15mins ago")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("$25.00")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _vm._v("Pending")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-rest__col" }, [
+                            _c("div", {
+                              staticClass: "icon cn-glyph-chevron-right"
+                            })
+                          ])
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "fb-rest__content" }, [
+                        _c("div", { staticClass: "fb-item" }, [
+                          _c("div", { staticClass: "fb-item__row" }, [
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/11.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--veg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu__price" }, [
+                                    _vm._v(
+                                      "\n\t\t                                    \t\t\t\t5\n\t\t                                    \t\t\t"
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__actions" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "fb-menu__action fb-icon fb-delete",
+                                      staticStyle: { "line-height": "45px" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n\t                                    \t\t\t\t\tReject\n\t                                    \t\t\t\t"
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/12.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--nveg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu__price" }, [
+                                    _vm._v(
+                                      "\n\t\t                                    \t\t\t\t1\n\t\t                                    \t\t\t"
+                                    )
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__actions" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "fb-menu__action fb-icon fb-delete",
+                                      staticStyle: { "line-height": "45px" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n\t                                    \t\t\t\t\tReject\n\t                                    \t\t\t\t"
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "fb-item__col" }, [
+                              _c("div", { staticClass: "fb-menu-item" }, [
+                                _c("div", { staticClass: "fb-menu__figure" }, [
+                                  _c("img", {
+                                    staticClass: "img-responsive",
+                                    attrs: {
+                                      src:
+                                        "/local-assets/app/modules/images/fb/13.png",
+                                      alt: ""
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "fb-menu--veg" })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "fb-menu__content" }, [
+                                  _c("div", { staticClass: "fb-menu__text" }, [
+                                    _c("span", [_vm._v("Duck confit crepes")])
+                                  ])
+                                ])
+                              ])
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "fb-placeorder" }, [
+                            _c(
+                              "div",
+                              { staticClass: "fb-placeorder__actions" },
+                              [
+                                _c(
+                                  "div",
+                                  { staticClass: "fb-placeorder__action" },
+                                  [
+                                    _vm._v(
+                                      "\n\t\t\t\t\t\t\t\t\t\t\t\t\tAccept Order\n\t\t\t\t\t\t\t\t\t\t\t\t"
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-826326a6", esExports)
+  }
+}
 
 /***/ })
 /******/ ]);

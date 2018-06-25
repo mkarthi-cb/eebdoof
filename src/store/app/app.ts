@@ -105,12 +105,32 @@ export const app = {
         getCompayUserConf(context: AppContext){
             var promiseWrapper = new Promise((resolve, reject) => resolve(true));
             return promiseWrapper.then(() => cbClient.app.get_user_info({},{}).then((data) => {
-                setCart(context, data.cart);
-                setUser(context, data.user);
-                setHotels(context, data.hotels);
-                setOreders(context, data.orders);
+                setCart(context, data.info.cart);
+                setUser(context, data.info.user);
+                setHotels(context, data.info.hotels);
+                setOreders(context, data.info.orders);
+            }));
+        },
+        placeOrder(context: AppContext){
+            var promiseWrapper = new Promise((resolve, reject) => resolve(true));
+            return promiseWrapper.then(() => cbClient.app.place_order({},{}).then((data) => {
+                setCart(context, data.info.cart);
+                setUser(context, data.info.user);
+                setHotels(context, data.info.hotels);
+                setOreders(context, data.info.orders);
+            }));
+        },
+        resetOrder(context: AppContext){
+            var promiseWrapper = new Promise((resolve, reject) => resolve(true));
+            return promiseWrapper.then(() => cbClient.app.reset_cart({}).then((data) => {
+                setCart(context, data.info.cart);
+                setUser(context, data.info.user);
+                setHotels(context, data.info.hotels);
+                setOreders(context, data.info.orders);
             }));
         }
+
+
     }
 
 }
@@ -143,3 +163,5 @@ export const deleteFoodItem = dispatch(actions.deleteFoodItem);
 export const updateItem = dispatch(actions.updateItem);
 export const addToCart = dispatch(actions.addToCart);
 export const getCompayUserConf = dispatch(actions.getCompayUserConf);
+export const placeOrder = dispatch(actions.placeOrder);
+export const resetOrder =dispatch(actions.resetOrder);

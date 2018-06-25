@@ -12,7 +12,7 @@
                     <div class="fb-header__container">
                         <div class="fb-header__main">
                             <div class="fb-header__logo">
-                                <img src="/local-assets/app/modules/images/fb/fb-logo-white.png" alt="" class="img-responsive">
+                                <img src="/local-assets/app/modules/images/fb/fb-loogo.png" alt="" class="img-responsive">
                             </div>
                         </div>
                         <div class="fb-header__actions">
@@ -21,8 +21,8 @@
                                     <div class="icon cn-glyph-bell"></div>
                                 </div>
                             </div>
-                            <div class="fb-header__action fb-track">
-                                My Orders
+                            <div class="fb-header__action fb-track" @click="showDelivery = !showDelivery">
+                                {{showDelivery?'See Menu':'See Orders'}}
                             </div>
                             <div class="fb-header__action">
                                 <div class="fb-acc">
@@ -40,7 +40,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="fb-main">
+                <order-delivery v-if="showDelivery"/>
+                <div class="fb-main" v-if="!showDelivery">
 			<div class="fb-main__container">
 			<!-- ===================================================================
 			Start: Main Menu Content 
@@ -50,15 +51,6 @@
 					<!-- ===========================================================
 					Start: Header
 					============================================================= -->
-					<div class="fb-dp__header">
-						<div class="fb-dp__search">
-							<span class="icon cn-glyph-search"></span>
-							<span style="margin-left: 6px;">Search...</span>
-						</div>
-						<!-- <div class="fb-dp__actions">
-							
-						</div> -->
-					</div>
 					<!-- ===========================================================
 					Start: Header
 					============================================================ -->
@@ -74,13 +66,7 @@
 							<!-- ===================================================
 							Start: Header Table
 							==================================================== -->
-							<div class="fb-table__header">
-								<div class="fb-table__row">
-									<div class="fb-table__col">
-										Restaurants
-									</div>
-								</div>
-							</div>
+							
 							<!-- ===================================================
 							End: Header Table
 							==================================================== -->
@@ -88,7 +74,7 @@
 							Start: Content Table
 							==================================================== -->
 							<div class="fb-table__content">
-                                    <div class="fb-rest active" v-for="(hotel, index) in hotels" v-bind:key="index">
+                                    <div class="fb-rest active" style="transform: scale(1); box-shadow: 0 1px 2px 0 rgba(0, 0, 20, 0.08), 0 2px 4px 0 rgba(0, 0, 20, 0.08)" v-for="(hotel, index) in hotels" v-bind:key="index">
                                         <!-- ===========================================
                                         Start: Menu
                                         ============================================ -->
@@ -102,7 +88,7 @@
                                                         <div class="fb-htl__figure" style="background-image: url('/local-assets/app/modules/images/fb/1.jpg">
                                                         </div>
                                                         <div class="fb-htl__name">
-                                                            {{hotel.name}}
+                                                            {{hotel.name}}'s Menu
                                                         </div>
                                                     </div>
                                                 </div>
@@ -288,6 +274,7 @@ import Vue from 'vue';
 import Vuex from "vuex";
 import Component from 'vue-class-component';
 import CreateItemModal from "@/components/CreateItemModal.vue";
+import OrderDelivery from "@/components/OrderDelivery.vue";
 import {Hotel, Item } from 'store/types/common';
 import * as app from "@/store/app";
 
@@ -297,7 +284,8 @@ import * as app from "@/store/app";
         },
         components: {
             // 'cb-placeholder': Placeholder,
-            'create-item':CreateItemModal
+            'create-item':CreateItemModal,
+            'order-delivery':OrderDelivery
         },
         name: 'food-bee-hotel'
     })
@@ -306,6 +294,7 @@ export default class HotelPage extends Vue {
     showDeleteItemModalBox: boolean = false;
     currentItem: Item;
     showCart: boolean = false;
+    showDelivery:boolean = false;
     data(){
         return{
             currentItem:{}
